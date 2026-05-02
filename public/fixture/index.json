@@ -1,0 +1,135 @@
+[
+  {
+    "id": "60a5cabc00000001",
+    "title": "Apoptotic process in human neurons",
+    "modelstate": "production",
+    "deprecated": false,
+    "provided_by_labels": ["GO Central"],
+    "contributor_orcids": ["https://orcid.org/0000-0002-1706-4196"],
+    "taxon": "NCBITaxon:9606",
+    "taxon_label": "Homo sapiens",
+    "date": "2026-04-30",
+    "overall": "pass",
+    "checks": {
+      "owl_consistency": "pass",
+      "gpad_compatibility": "pass",
+      "disconnected_individuals": "pass",
+      "multiply_reified_edges": "pass"
+    },
+    "fail_count": 0
+  },
+  {
+    "id": "60a5cabc00000002",
+    "title": "Glycolysis in S. cerevisiae",
+    "modelstate": "production",
+    "deprecated": false,
+    "provided_by_labels": ["SGD"],
+    "contributor_orcids": ["https://orcid.org/0000-0001-9990-9930"],
+    "taxon": "NCBITaxon:559292",
+    "taxon_label": "Saccharomyces cerevisiae S288C",
+    "date": "2026-04-29",
+    "overall": "fail",
+    "checks": {
+      "owl_consistency": "pass",
+      "gpad_compatibility": "fail",
+      "disconnected_individuals": "fail",
+      "multiply_reified_edges": "pass"
+    },
+    "fail_count": 1
+  },
+  {
+    "id": "60a5cabc00000007",
+    "title": "Causal model: signal transduction cascade",
+    "modelstate": "production",
+    "deprecated": false,
+    "provided_by_labels": ["GO Central"],
+    "contributor_orcids": ["https://orcid.org/0000-0002-1706-4196"],
+    "taxon": "NCBITaxon:9606",
+    "taxon_label": "Homo sapiens",
+    "date": "2026-04-25",
+    "overall": "pass",
+    "checks": {
+      "owl_consistency": "pass",
+      "gpad_compatibility": "fail",
+      "disconnected_individuals": "pass",
+      "multiply_reified_edges": "pass"
+    },
+    "fail_count": 0
+  },
+  {
+    "id": "60a5cabc00000003",
+    "title": "DNA repair after UV damage",
+    "modelstate": "development",
+    "deprecated": false,
+    "provided_by_labels": ["MGI"],
+    "contributor_orcids": ["https://orcid.org/0000-0003-0568-8378"],
+    "taxon": "NCBITaxon:10090",
+    "taxon_label": "Mus musculus",
+    "date": "2026-05-01",
+    "overall": "fail",
+    "checks": {
+      "owl_consistency": "fail",
+      "gpad_compatibility": "pass",
+      "disconnected_individuals": "pass",
+      "multiply_reified_edges": "fail"
+    },
+    "fail_count": 2
+  },
+  {
+    "id": "60a5cabc00000004",
+    "title": "Untitled draft",
+    "modelstate": "development",
+    "deprecated": false,
+    "provided_by_labels": ["WormBase"],
+    "contributor_orcids": ["https://orcid.org/0000-0002-1706-4196"],
+    "taxon": null,
+    "taxon_label": null,
+    "date": "2026-05-02",
+    "overall": "unknown",
+    "checks": {
+      "owl_consistency": "unknown",
+      "gpad_compatibility": "pass",
+      "disconnected_individuals": "pass",
+      "multiply_reified_edges": "pass"
+    },
+    "fail_count": 0
+  },
+  {
+    "id": "60a5cabc00000005",
+    "title": "Old test model (delete-marked)",
+    "modelstate": "delete",
+    "deprecated": true,
+    "provided_by_labels": ["GO Central"],
+    "contributor_orcids": ["https://orcid.org/0000-0002-1706-4196"],
+    "taxon": "NCBITaxon:9606",
+    "taxon_label": "Homo sapiens",
+    "date": "2020-01-15",
+    "overall": "pass",
+    "checks": {
+      "owl_consistency": "pass",
+      "gpad_compatibility": "pass",
+      "disconnected_individuals": "pass",
+      "multiply_reified_edges": "pass"
+    },
+    "fail_count": 0
+  },
+  {
+    "id": "60a5cabc00000006",
+    "title": "Newly-added query, not yet evaluated",
+    "modelstate": "production",
+    "deprecated": false,
+    "provided_by_labels": ["GO Central"],
+    "contributor_orcids": ["https://orcid.org/0000-0002-1706-4196"],
+    "taxon": "NCBITaxon:9606",
+    "taxon_label": "Homo sapiens",
+    "date": "2026-04-15",
+    "overall": "unknown",
+    "checks": {
+      "owl_consistency": "pass",
+      "gpad_compatibility": "pass",
+      "disconnected_individuals": "pass",
+      "multiply_reified_edges": "unknown"
+    },
+    "fail_count": 0
+  }
+]

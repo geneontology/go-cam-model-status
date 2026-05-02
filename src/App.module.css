@@ -1,0 +1,37 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex-grow: 1;
+}
+
+.navbar {
+  @media (min-width: $mantine-breakpoint-sm) {
+    padding-left: var(--mantine-spacing-xs);
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.burger {
+  margin: 0 var(--mantine-spacing-md);
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    display: none;
+  }
+}
+
+.smallScreenHeaderLinks {
+  margin-top: var(--mantine-spacing-xs);
+  padding: 0 var(--mantine-spacing-xs);
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    display: none;
+  }
+}

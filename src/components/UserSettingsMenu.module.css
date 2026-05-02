@@ -1,0 +1,10 @@
+.menuInput {
+  border-radius: var(--mantine-radius-sm);
+  font-size: var(--mantine-font-size-sm);
+  padding: calc(var(--mantine-spacing-xs) / 1.5) var(--mantine-spacing-sm);
+  line-height: 1;
+}
+
+.menuInput:hover {
+  background-color: var(--mantine-color-gray-1);
+}

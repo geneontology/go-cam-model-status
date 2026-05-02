@@ -1,0 +1,93 @@
+{
+  "id": "60a5cabc00000003",
+  "iri": "http://model.geneontology.org/60a5cabc00000003",
+  "ttl_path": "models/60a5cabc00000003.ttl",
+  "master_sha": "fixt0001abcdef0123456789abcdef0123456789",
+  "generated_at": "2026-05-02T12:00:00Z",
+  "metadata": {
+    "title": "DNA repair after UV damage",
+    "modelstate": "development",
+    "deprecated": false,
+    "date": "2026-05-01",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-0568-8378",
+        "name": "MGI Curator"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "http://www.informatics.jax.org/",
+        "label": "MGI"
+      }
+    ],
+    "taxon": "NCBITaxon:10090",
+    "taxon_label": "Mus musculus"
+  },
+  "checks": [
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "status": "fail",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "duration_ms": 410,
+      "since_commit": "deadbee01234567890abcdef0123456789abcdef",
+      "since_date": "2026-05-01T15:22:00Z",
+      "last_passed_commit": "cafe000099887766554433221100ffeeddccbbaa",
+      "last_passed_date": "2026-04-30T11:05:00Z",
+      "violations": [
+        {
+          "kind": "owl_inconsistent_individual",
+          "individual": "http://model.geneontology.org/60a5cabc00000003/act-3",
+          "types": [
+            "http://purl.obolibrary.org/obo/GO_0003674",
+            "http://purl.obolibrary.org/obo/GO_0008150"
+          ]
+        }
+      ],
+      "severity": "error"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "status": "pass",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "violations": [],
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "status": "pass",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "violations": [],
+      "severity": "warning"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "status": "fail",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "since_commit": "deadbee01234567890abcdef0123456789abcdef",
+      "since_date": "2026-05-01T15:22:00Z",
+      "violations": [
+        {
+          "kind": "sparql_row",
+          "bindings": {
+            "source": "http://model.geneontology.org/60a5cabc00000003/act-1",
+            "property": "http://purl.obolibrary.org/obo/RO_0002413",
+            "target": "http://model.geneontology.org/60a5cabc00000003/act-2"
+          }
+        }
+      ],
+      "severity": "warning"
+    }
+  ]
+}

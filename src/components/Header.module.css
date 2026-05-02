@@ -1,0 +1,15 @@
+.logoImage {
+  height: 100%;
+  padding: var(--mantine-spacing-xs) 0;
+  margin-right: calc(var(--mantine-spacing-xs) / 2);
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    margin-left: var(--mantine-spacing-md);
+  }
+}
+
+.title {
+  font-size: var(--mantine-font-size-lg);
+  font-weight: 500;
+  line-height: 1;
+}

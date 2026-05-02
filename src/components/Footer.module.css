@@ -1,0 +1,7 @@
+.footer {
+  margin: var(--mantine-spacing-xl) calc(var(--mantine-spacing-md) * -1)
+    calc(var(--mantine-spacing-md) * -1) calc(var(--mantine-spacing-md) * -1);
+  padding: var(--mantine-spacing-md);
+  background-color: var(--mantine-color-white);
+  border-top: 1px solid var(--mantine-color-gray-2);
+}

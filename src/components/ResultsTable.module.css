@@ -1,0 +1,4 @@
+.resultsTable {
+  box-shadow: var(--mantine-shadow-sm);
+  background-color: var(--mantine-color-white);
+}

@@ -1,0 +1,29 @@
+.facetValueGroup {
+  cursor: pointer;
+  border-radius: var(--mantine-radius-default);
+  padding: calc(var(--mantine-spacing-xs) / 2) var(--mantine-spacing-xs);
+  font-size: var(--mantine-font-size-sm);
+}
+
+.facetValueGroup:hover {
+  background-color: var(--mantine-color-default-hover);
+}
+
+.facetValueLabel {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.facetValueLabel.active {
+  font-weight: 700;
+}
+
+.facetValueCount {
+  color: var(--mantine-color-dimmed);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.facetValueCount svg {
+  display: block;
+}

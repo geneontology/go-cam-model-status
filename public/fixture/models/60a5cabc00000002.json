@@ -1,0 +1,98 @@
+{
+  "id": "60a5cabc00000002",
+  "iri": "http://model.geneontology.org/60a5cabc00000002",
+  "ttl_path": "models/60a5cabc00000002.ttl",
+  "master_sha": "fixt0001abcdef0123456789abcdef0123456789",
+  "generated_at": "2026-05-02T12:00:00Z",
+  "metadata": {
+    "title": "Glycolysis in S. cerevisiae",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2026-04-29",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-9990-9930",
+        "name": "SGD Curator"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://www.yeastgenome.org/",
+        "label": "SGD"
+      }
+    ],
+    "taxon": "NCBITaxon:559292",
+    "taxon_label": "Saccharomyces cerevisiae S288C"
+  },
+  "checks": [
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "status": "pass",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "duration_ms": 285,
+      "violations": [],
+      "severity": "error"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "status": "fail",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "since_commit": "abc1234567abcdef0123456789abcdef01234567",
+      "since_date": "2026-04-29T08:30:00Z",
+      "last_passed_commit": "9990ddee0123456789abcdef0123456789abcdef",
+      "last_passed_date": "2026-04-28T18:12:00Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/60a5cabc00000002/abc-act-1",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Activity",
+          "reason": "missing required occurs_in"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/60a5cabc00000002/abc-act-2",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Activity",
+          "reason": "missing required enabled_by"
+        }
+      ],
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "status": "fail",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "since_commit": "abc1234567abcdef0123456789abcdef01234567",
+      "since_date": "2026-04-29T08:30:00Z",
+      "last_passed_commit": "9990ddee0123456789abcdef0123456789abcdef",
+      "last_passed_date": "2026-04-28T18:12:00Z",
+      "violations": [
+        {
+          "kind": "sparql_row",
+          "bindings": {
+            "individual": "http://model.geneontology.org/60a5cabc00000002/orphan-1",
+            "type": "GO:0003674"
+          }
+        }
+      ],
+      "severity": "warning"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "status": "pass",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "violations": [],
+      "severity": "warning"
+    }
+  ]
+}

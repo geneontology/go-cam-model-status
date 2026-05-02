@@ -1,0 +1,68 @@
+{
+  "id": "60a5cabc00000005",
+  "iri": "http://model.geneontology.org/60a5cabc00000005",
+  "ttl_path": "models/60a5cabc00000005.ttl",
+  "master_sha": "fixt0001abcdef0123456789abcdef0123456789",
+  "generated_at": "2026-05-02T12:00:00Z",
+  "metadata": {
+    "title": "Old test model (delete-marked)",
+    "modelstate": "delete",
+    "deprecated": true,
+    "date": "2020-01-15",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-1706-4196",
+        "name": "Test Curator"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "http://geneontology.org",
+        "label": "GO Central"
+      }
+    ],
+    "taxon": "NCBITaxon:9606",
+    "taxon_label": "Homo sapiens"
+  },
+  "checks": [
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "status": "pass",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "violations": [],
+      "severity": "error"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "status": "pass",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "violations": [],
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "status": "pass",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "violations": [],
+      "severity": "warning"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "status": "pass",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "violations": [],
+      "severity": "warning"
+    }
+  ]
+}
