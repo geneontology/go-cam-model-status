@@ -26,6 +26,42 @@
   },
   "checks": [
     {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "status": "fail",
+      "ran_at": "2026-05-02T12:00:00Z",
+      "duration_ms": 17,
+      "since_commit": "abc1234567abcdef0123456789abcdef01234567",
+      "since_date": "2026-04-29T08:30:00Z",
+      "last_passed_commit": "9990ddee0123456789abcdef0123456789abcdef",
+      "last_passed_date": "2026-04-28T18:12:00Z",
+      "violations": [
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 58,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3&object=GLYSYN-PWYSmallMolecule23633> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 67,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3&object=GLYSYN-PWYSmallMolecule23619> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 122,
+          "col": 14,
+          "message": "Lexical form '2026-99-01' not valid for datatype XSD dateTime"
+        }
+      ],
+      "severity": "warning"
+    },
+    {
       "id": "owl_consistency",
       "kind": "owl_consistency",
       "label": "OWL Consistency",

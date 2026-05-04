@@ -11,6 +11,7 @@
     "date": "2026-04-30",
     "overall": "pass",
     "checks": {
+      "rdf_valid": "pass",
       "owl_consistency": "pass",
       "gpad_compatibility": "pass",
       "disconnected_individuals": "pass",
@@ -30,12 +31,13 @@
     "date": "2026-04-29",
     "overall": "fail",
     "checks": {
+      "rdf_valid": "fail",
       "owl_consistency": "pass",
       "gpad_compatibility": "fail",
       "disconnected_individuals": "fail",
       "multiply_reified_edges": "pass"
     },
-    "fail_count": 1
+    "fail_count": 2
   },
   {
     "id": "60a5cabc00000007",
@@ -49,6 +51,7 @@
     "date": "2026-04-25",
     "overall": "pass",
     "checks": {
+      "rdf_valid": "pass",
       "owl_consistency": "pass",
       "gpad_compatibility": "fail",
       "disconnected_individuals": "pass",
@@ -68,6 +71,7 @@
     "date": "2026-05-01",
     "overall": "fail",
     "checks": {
+      "rdf_valid": "pass",
       "owl_consistency": "fail",
       "gpad_compatibility": "pass",
       "disconnected_individuals": "pass",
@@ -87,6 +91,7 @@
     "date": "2026-05-02",
     "overall": "unknown",
     "checks": {
+      "rdf_valid": "pass",
       "owl_consistency": "unknown",
       "gpad_compatibility": "pass",
       "disconnected_individuals": "pass",
@@ -106,6 +111,7 @@
     "date": "2020-01-15",
     "overall": "pass",
     "checks": {
+      "rdf_valid": "pass",
       "owl_consistency": "pass",
       "gpad_compatibility": "pass",
       "disconnected_individuals": "pass",
@@ -125,6 +131,7 @@
     "date": "2026-04-15",
     "overall": "unknown",
     "checks": {
+      "rdf_valid": "pass",
       "owl_consistency": "pass",
       "gpad_compatibility": "pass",
       "disconnected_individuals": "pass",

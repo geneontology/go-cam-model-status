@@ -5,6 +5,13 @@
   "model_count": 7,
   "checks": [
     {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "name": "RDF Validity",
+      "description": "Apache Jena RIOT parse with strict + checking enabled (parity with `riot --validate`). Pass = parses cleanly with no diagnostics; fail = parses but riot reports lexical / IRI / language-tag / datatype issues; error = unparseable.",
+      "severity": "warning"
+    },
+    {
       "id": "owl_consistency",
       "kind": "owl_consistency",
       "name": "OWL Consistency",

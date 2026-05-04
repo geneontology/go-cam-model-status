@@ -5,7 +5,11 @@ export const RESULTS_PAGE_SIZE = 100;
 
 // Built-in check ids — kept as constants so components can sort them
 // stably ahead of dynamic SPARQL checks.
-export const BUILTIN_CHECK_IDS = ["owl_consistency", "gpad_compatibility"] as const;
+export const BUILTIN_CHECK_IDS = [
+  "rdf_valid",
+  "owl_consistency",
+  "gpad_compatibility",
+] as const;
 
 // noctua-models repo coordinates, used to build GitHub source links and the
 // jsDelivr data URL. Override per-deployment via VITE_DATA_BASE if needed.

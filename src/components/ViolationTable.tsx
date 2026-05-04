@@ -37,6 +37,43 @@ const ViolationTable: React.FC<ViolationTableProps> = ({
     );
   }
 
+  // RDF validity rendering: one row per riot diagnostic.
+  if (definition.kind === "rdf_valid") {
+    return (
+      <Table withTableBorder withColumnBorders striped>
+        <Table.Thead>
+          <Table.Tr>
+            <Table.Th>Severity</Table.Th>
+            <Table.Th>Line:Col</Table.Th>
+            <Table.Th>Message</Table.Th>
+          </Table.Tr>
+        </Table.Thead>
+        <Table.Tbody>
+          {violations.map((v, i) => {
+            if (v.kind !== "riot_diagnostic") {
+              return null;
+            }
+            return (
+              <Table.Tr key={i}>
+                <Table.Td>
+                  <Code>{v.severity}</Code>
+                </Table.Td>
+                <Table.Td>
+                  <Code>
+                    {v.line}:{v.col}
+                  </Code>
+                </Table.Td>
+                <Table.Td>
+                  <Text size="sm">{v.message}</Text>
+                </Table.Td>
+              </Table.Tr>
+            );
+          })}
+        </Table.Tbody>
+      </Table>
+    );
+  }
+
   // OWL inconsistency rendering: one row per inconsistent individual.
   if (definition.kind === "owl_consistency") {
     return (

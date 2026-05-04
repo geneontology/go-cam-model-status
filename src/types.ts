@@ -26,7 +26,13 @@ export type Severity = "info" | "warning" | "error";
 // non-conformance does not mean the model is wrong, only that it does not
 // translate cleanly to GPAD output. A future "main_shex_conformance" kind
 // will be added once ontology-closure preprocessing is in place (v2+).
-export type CheckKind = "owl_consistency" | "gpad_compatibility" | "sparql";
+// `rdf_valid` consumes Apache Jena RIOT diagnostics emitted during the parse
+// phase of jena-batch (with strict + checking enabled, matching `riot --validate`).
+export type CheckKind =
+  | "rdf_valid"
+  | "owl_consistency"
+  | "gpad_compatibility"
+  | "sparql";
 
 export interface CheckDefinition {
   id: string;
@@ -138,6 +144,13 @@ export type Violation =
   | {
       kind: "sparql_row";
       bindings: Record<string, string>;
+    }
+  | {
+      kind: "riot_diagnostic";
+      severity: "WARN" | "ERROR" | "FATAL";
+      line: number;
+      col: number;
+      message: string;
     };
 
 export interface Manifest {
