@@ -81,6 +81,12 @@ export interface IndexedModelStatus {
   overall: CheckStatus;
   checks: Record<string, CheckStatus>;
   fail_count: number;
+  // Ids of any sparql/filters/*.rq ASK queries that matched this model in
+  // the producer run. A non-empty array means the model was excluded from
+  // validation: every entry in `checks` is `unknown`, `overall` is
+  // `unknown`, and `fail_count` is 0. Empty (or missing) means the model
+  // was processed normally.
+  filter_reasons?: string[];
   // Per-check status is also flattened to a top-level field at runtime
   // (see runtimeFields.ts:flattenChecks) so the facet/search machinery can
   // treat each check id as a normal text field. The index signature also
@@ -106,6 +112,9 @@ export interface ModelStatusDetail {
     taxon_label?: string | null;
   };
   checks: CheckResultDetail[];
+  // Mirror of IndexedModelStatus.filter_reasons. Non-empty means the model
+  // was excluded by one or more filters; `checks` will be empty.
+  filter_reasons?: string[];
 }
 
 export interface CheckResultDetail {
@@ -153,12 +162,22 @@ export type Violation =
       message: string;
     };
 
+// Producer-side sparql/filters/*.rq ASK queries that exclude models from
+// validation. The dashboard uses these for the "Filter reason" facet and
+// to link from the drawer to the source query on GitHub.
+export interface FilterDefinition {
+  id: string;
+  source_path?: string;
+  description?: string;
+}
+
 export interface Manifest {
   schema_version: number;
   generated_at: string;
   master_sha: string;
   model_count: number;
   checks: CheckDefinition[];
+  filters?: FilterDefinition[];
 }
 
 export interface StatusData {

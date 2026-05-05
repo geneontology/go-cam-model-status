@@ -1,5 +1,6 @@
 import {
   useQueryState,
+  parseAsBoolean,
   parseAsString,
   createParser,
   type SingleParser,
@@ -169,4 +170,18 @@ export function useUrlState<T>(fields: readonly FieldConfig<T, keyof T>[]) {
  */
 export function useSelectedModel() {
   return useQueryState("model", parseAsString.withDefault(""));
+}
+
+/**
+ * Whether to include models excluded by sparql/filters/*.rq in results.
+ * Default false — filtered models are workflow noise (e.g. modelstate
+ * "delete") that curators don't want surfacing in the main view. Toggling
+ * this on lets them inspect what's been suppressed and slice further by
+ * the `filter_reasons` facet.
+ */
+export function useShowFiltered() {
+  return useQueryState(
+    "show_filtered",
+    parseAsBoolean.withDefault(false),
+  );
 }

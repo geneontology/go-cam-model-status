@@ -29,6 +29,10 @@ export function ttlSourceUrl(modelId: string): string {
   return `https://github.com/${NOCTUA_MODELS_OWNER}/${NOCTUA_MODELS_REPO}/blob/${NOCTUA_MODELS_BRANCH}/models/${modelId}.ttl`;
 }
 
+export function repoSourceUrl(repoRelativePath: string): string {
+  return `https://github.com/${NOCTUA_MODELS_OWNER}/${NOCTUA_MODELS_REPO}/blob/${NOCTUA_MODELS_BRANCH}/${repoRelativePath}`;
+}
+
 export function noctuaEditorUrl(modelId: string): string {
   // Noctua is currently served on plain http, not https
   return `http://noctua.geneontology.org/editor/graph/gomodel:${modelId}`;

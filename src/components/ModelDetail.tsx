@@ -17,11 +17,13 @@ import {
 import {
   ArrowSquareOutIcon,
   FileTextIcon,
+  FunnelIcon,
   LinkIcon,
 } from "@phosphor-icons/react";
 import useModelDetail from "../hooks/useModelDetail.ts";
 import {
   noctuaEditorUrl,
+  repoSourceUrl,
   ttlSourceUrl,
   BUILTIN_CHECK_IDS,
 } from "../constants.ts";
@@ -134,20 +136,29 @@ const ModelDetail: React.FC<ModelDetailProps> = ({
         <Stack gap="md">
           <MetadataSection data={data} />
 
-          <Divider label="Checks" labelPosition="left" />
-          <Accordion
-            multiple
-            defaultValue={defaultOpenCheckIds}
-            variant="separated"
-          >
-            {orderedDefs.map((def) => (
-              <CheckRow
-                key={def.id}
-                definition={def}
-                result={resultById[def.id]}
-              />
-            ))}
-          </Accordion>
+          {data.filter_reasons && data.filter_reasons.length > 0 ? (
+            <FilteredBanner
+              reasons={data.filter_reasons}
+              manifest={manifest}
+            />
+          ) : (
+            <>
+              <Divider label="Checks" labelPosition="left" />
+              <Accordion
+                multiple
+                defaultValue={defaultOpenCheckIds}
+                variant="separated"
+              >
+                {orderedDefs.map((def) => (
+                  <CheckRow
+                    key={def.id}
+                    definition={def}
+                    result={resultById[def.id]}
+                  />
+                ))}
+              </Accordion>
+            </>
+          )}
 
           <Divider />
           <Group gap="xs" wrap="wrap">
@@ -272,6 +283,59 @@ const MetadataSection: React.FC<{
         )}
       </Stack>
     </Box>
+  );
+};
+
+const FilteredBanner: React.FC<{
+  reasons: string[];
+  manifest: Manifest | undefined;
+}> = ({ reasons, manifest }) => {
+  const filterById = useMemo(() => {
+    return Object.fromEntries(
+      (manifest?.filters ?? []).map((f) => [f.id, f]),
+    );
+  }, [manifest]);
+  return (
+    <Alert
+      color="gray"
+      variant="light"
+      icon={<FunnelIcon size={18} />}
+      title="Excluded from validation"
+    >
+      <Stack gap="xs">
+        <Text size="sm">
+          This model matched {reasons.length === 1 ? "the" : ""} exclusion
+          filter{reasons.length === 1 ? "" : "s"}{" "}
+          {reasons.map((r, i) => {
+            const def = filterById[r];
+            return (
+              <span key={r}>
+                {i > 0 && ", "}
+                {def?.source_path ? (
+                  <Anchor
+                    href={repoSourceUrl(def.source_path)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    size="sm"
+                  >
+                    <Code>{r}</Code>
+                  </Anchor>
+                ) : (
+                  <Code>{r}</Code>
+                )}
+              </span>
+            );
+          })}
+          , so no checks were run on it.
+        </Text>
+        <Text size="xs" c="dimmed">
+          Filters are SPARQL ASK queries under{" "}
+          <Code>sparql/filters/</Code> in noctua-models. Models that match
+          are still indexed (so curators can confirm what's been suppressed)
+          but are not validated.
+        </Text>
+      </Stack>
+    </Alert>
   );
 };
 

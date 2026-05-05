@@ -24,55 +24,6 @@
     "taxon": "NCBITaxon:9606",
     "taxon_label": "Homo sapiens"
   },
-  "checks": [
-    {
-      "id": "rdf_valid",
-      "kind": "rdf_valid",
-      "label": "RDF Validity",
-      "status": "pass",
-      "ran_at": "2026-05-02T12:00:00Z",
-      "duration_ms": 14,
-      "violations": [],
-      "severity": "warning"
-    },
-    {
-      "id": "owl_consistency",
-      "kind": "owl_consistency",
-      "label": "OWL Consistency",
-      "status": "pass",
-      "ran_at": "2026-05-02T12:00:00Z",
-      "violations": [],
-      "severity": "error"
-    },
-    {
-      "id": "gpad_compatibility",
-      "kind": "gpad_compatibility",
-      "label": "GPAD Compatibility",
-      "status": "pass",
-      "ran_at": "2026-05-02T12:00:00Z",
-      "violations": [],
-      "severity": "info",
-      "pass_label": "GPAD-compatible",
-      "fail_label": "Causal model",
-      "unknown_label": "Unknown shape"
-    },
-    {
-      "id": "disconnected_individuals",
-      "kind": "sparql",
-      "label": "Disconnected Individuals",
-      "status": "pass",
-      "ran_at": "2026-05-02T12:00:00Z",
-      "violations": [],
-      "severity": "warning"
-    },
-    {
-      "id": "multiply_reified_edges",
-      "kind": "sparql",
-      "label": "Multiply Reified Edges",
-      "status": "pass",
-      "ran_at": "2026-05-02T12:00:00Z",
-      "violations": [],
-      "severity": "warning"
-    }
-  ]
+  "checks": [],
+  "filter_reasons": ["deleted"]
 }

@@ -109,15 +109,16 @@
     "taxon": "NCBITaxon:9606",
     "taxon_label": "Homo sapiens",
     "date": "2020-01-15",
-    "overall": "pass",
+    "overall": "unknown",
     "checks": {
-      "rdf_valid": "pass",
-      "owl_consistency": "pass",
-      "gpad_compatibility": "pass",
-      "disconnected_individuals": "pass",
-      "multiply_reified_edges": "pass"
+      "rdf_valid": "unknown",
+      "owl_consistency": "unknown",
+      "gpad_compatibility": "unknown",
+      "disconnected_individuals": "unknown",
+      "multiply_reified_edges": "unknown"
     },
-    "fail_count": 0
+    "fail_count": 0,
+    "filter_reasons": ["deleted"]
   },
   {
     "id": "60a5cabc00000006",
@@ -138,5 +139,26 @@
       "multiply_reified_edges": "unknown"
     },
     "fail_count": 0
+  },
+  {
+    "id": "60a5cabc00000008",
+    "title": "Reactome: Cellular response to heat stress (memory-heavy)",
+    "modelstate": "production",
+    "deprecated": false,
+    "provided_by_labels": ["Reactome"],
+    "contributor_orcids": ["https://orcid.org/0000-0002-1706-4196"],
+    "taxon": "NCBITaxon:9606",
+    "taxon_label": "Homo sapiens",
+    "date": "2026-03-10",
+    "overall": "unknown",
+    "checks": {
+      "rdf_valid": "unknown",
+      "owl_consistency": "unknown",
+      "gpad_compatibility": "unknown",
+      "disconnected_individuals": "unknown",
+      "multiply_reified_edges": "unknown"
+    },
+    "fail_count": 0,
+    "filter_reasons": ["exclude"]
   }
 ]

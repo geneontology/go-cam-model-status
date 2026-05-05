@@ -2,7 +2,7 @@
   "schema_version": 1,
   "generated_at": "2026-05-02T12:00:00Z",
   "master_sha": "fixt0001abcdef0123456789abcdef0123456789",
-  "model_count": 7,
+  "model_count": 8,
   "checks": [
     {
       "id": "rdf_valid",
@@ -45,6 +45,16 @@
       "severity": "warning",
       "source_path": "sparql/status/multiply_reified_edges.rq",
       "columns": ["source", "property", "target"]
+    }
+  ],
+  "filters": [
+    {
+      "id": "deleted",
+      "source_path": "sparql/filters/deleted.rq"
+    },
+    {
+      "id": "exclude",
+      "source_path": "sparql/filters/exclude.rq"
     }
   ]
 }

@@ -3,6 +3,7 @@ import {
   Alert,
   AppShell,
   Burger,
+  Checkbox,
   Divider,
   Group,
   Loader,
@@ -25,7 +26,11 @@ import HeaderLinks from "./components/HeaderLinks.tsx";
 import Footer from "./components/Footer.tsx";
 import ResultsDisplay from "./components/ResultsDisplay.tsx";
 import ModelDetail from "./components/ModelDetail.tsx";
-import { useUrlState, useSelectedModel } from "./hooks/useUrlState.ts";
+import {
+  useUrlState,
+  useSelectedModel,
+  useShowFiltered,
+} from "./hooks/useUrlState.ts";
 import { buildExtendedFields, flattenChecks } from "./runtimeFields.ts";
 
 import classes from "./App.module.css";
@@ -38,6 +43,7 @@ function App() {
   const [opened, { toggle }] = useDisclosure();
   const targetRef = useRef<HTMLDivElement>(null);
   const [selectedModel, setSelectedModel] = useSelectedModel();
+  const [showFiltered, setShowFiltered] = useShowFiltered();
 
   const { isPending, isError, data, error } = useQueryData();
 
@@ -47,11 +53,38 @@ function App() {
     [data?.manifest],
   );
 
-  // Pre-flatten so per-check facets read like normal text fields.
-  const flatModels = useMemo(
-    () => (data ? flattenChecks(data.models) : []),
-    [data],
-  );
+  // Pre-flatten so per-check facets read like normal text fields. Also
+  // exclude models hidden behind the "Show filtered models" toggle so they
+  // don't show up in search results, facets, or counts.
+  const flatModels = useMemo(() => {
+    if (!data) {
+      return [];
+    }
+    const flat = flattenChecks(data.models);
+    if (showFiltered) {
+      return flat;
+    }
+    return flat.filter(
+      (m) => !m.filter_reasons || m.filter_reasons.length === 0,
+    );
+  }, [data, showFiltered]);
+
+  // Total count of models the producer has flagged as filtered, regardless
+  // of the toggle — used to label the toggle so curators can see how many
+  // models they're hiding.
+  const filteredCount = useMemo(() => {
+    if (!data) {
+      return 0;
+    }
+    let n = 0;
+    for (const m of data.models) {
+      const reasons = m.filter_reasons;
+      if (reasons && reasons.length > 0) {
+        n += 1;
+      }
+    }
+    return n;
+  }, [data]);
 
   const { search, setSearch, filters, setFilters } = useUrlState(fields);
 
@@ -117,6 +150,16 @@ function App() {
             <Divider />
           </Stack>
           <Stack gap="md" mt="md">
+            {filteredCount > 0 && (
+              <Checkbox
+                checked={showFiltered}
+                onChange={(e) => {
+                  void setShowFiltered(e.currentTarget.checked || null);
+                }}
+                label={`Show filtered models (${filteredCount})`}
+                description="Models excluded from validation by sparql/filters/*.rq"
+              />
+            )}
             {facetFields.map((field) => (
               <Facet
                 key={String(field.field)}

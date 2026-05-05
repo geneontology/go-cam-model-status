@@ -94,6 +94,15 @@ export const config = createConfig<IndexedModelStatus>({
       defaultVisible: false,
     }),
     modelField({
+      field: "filter_reasons",
+      label: "Filter reason",
+      facet: "array",
+      facetHelp:
+        "Models excluded from validation by a sparql/filters/*.rq ASK query — e.g. lego:modelstate \"delete\". Use the \"Show filtered models\" toggle above to include them in results, then narrow by reason here.",
+      facetUrlKey: "filter",
+      defaultVisible: false,
+    }),
+    modelField({
       field: "fail_count",
       label: "Failing check count",
       facet: "numeric",

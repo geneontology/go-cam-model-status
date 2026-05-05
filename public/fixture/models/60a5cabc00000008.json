@@ -1,0 +1,29 @@
+{
+  "id": "60a5cabc00000008",
+  "iri": "http://model.geneontology.org/60a5cabc00000008",
+  "ttl_path": "models/60a5cabc00000008.ttl",
+  "master_sha": "fixt0001abcdef0123456789abcdef0123456789",
+  "generated_at": "2026-05-02T12:00:00Z",
+  "metadata": {
+    "title": "Reactome: Cellular response to heat stress (memory-heavy)",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2026-03-10",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-1706-4196",
+        "name": "Test Curator"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://reactome.org",
+        "label": "Reactome"
+      }
+    ],
+    "taxon": "NCBITaxon:9606",
+    "taxon_label": "Homo sapiens"
+  },
+  "checks": [],
+  "filter_reasons": ["exclude"]
+}
