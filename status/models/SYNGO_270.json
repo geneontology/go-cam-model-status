@@ -1,0 +1,109 @@
+{
+  "id": "SYNGO_270",
+  "iri": "http://model.geneontology.org/SYNGO_270",
+  "ttl_path": "models/SYNGO_270.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_270",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-05-16",
+    "comment": "Rationale: Authors characterized synaptobrevin 1 (syb1, VAMP1) as a v-SNARE in SV exocytosis by a molecular rescue approach and found that this paralog of syb2 is expressed in a subset of hippocampal neurons in their syb2 KO culture (Fig 1).\n\nThey could correlate the size of the RRP of individual neurons to their syb1 expression levels and showed that knocking down syb1 dramatically decreases the RRP of mass-cultured syb2 KO neurons (Fig 2).\n\nConcluding that Synaptobrevin 1 mediates vesicle priming and evoked release in a subpopulation of hippocampal neurons.\n\nExperiment: They grew murine hippocampal neurons from syb2 KO (Schoch et al. 2001) and WT littermates on glial microislands and performed whole cell patch-clamp experiments on autaptic neurons.. Experimental description: Male and female mouse embryos [18.5 days old (E18.5)] were delivered by cesarean section.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-7480-0826"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-4022-8707"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-5648-066X"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-2533-9548"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-1212-5623"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

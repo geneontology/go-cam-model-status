@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_988",
+  "iri": "http://model.geneontology.org/SYNGO_988",
+  "ttl_path": "models/SYNGO_988.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_988",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2021-02-25",
+    "comment": "Rationale: α-actinin-2 is found abundantly in crude synaptosomal membrane (Fig. 2A)\nα-Actinin-2 protein is localized to excitatory synapses (Fig. 5)\nImmunogold labeling for α-actinin-2 in postsynaptic densities (Fig. 6)\nColocalization of α-actinin-2 with postsynaptic proteins by EM (Fig. 7).\n\n28/6/2017 Pim\n- ACTN2 is localized in membrane and cytosolic synape preparations (Fig.2).\n- ACTN2 is localized to exc. synapses as shown by co-localization with Glur1\n- ACTN2 is mainly located at PSD (membrane and cytoplasmic part) and on microfilaments (a.k.a actin) (Fig.6).\n- ACTN2 is colocalizing at the inner face of the PSD membrane with the NR1 subunit (Fig.7).. Experimental description: M&M and results section\nImmunoblots of rat brain membranes\nMale Sprague Dawley rats were used for EM\nCrude synaptosomal membrane fraction from rat cortex",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-6153-3586"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2666-0758"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "SYNGO_1774",
+  "iri": "http://model.geneontology.org/SYNGO_1774",
+  "ttl_path": "models/SYNGO_1774.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_1774",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2024-03-14",
+    "comment": "Rationale: 2/11/2017 Pim\n- Authors show N-cadherin labeling of the synaptic cleft outside of the area defined by the active zone and PSD (Fig.7E). The authors interpret this labeling as to originate from N-cadherin proteins intergral to the plasm membranes of the pre- and postsynaptic compartments. They do this based on the observations that 1) N-cadherin interacts with intracellular alphaN-catenin protein (Fig.8) and that 2) alphaN-catenin is present at the interface of the presynaptic as well as the postsynaptic plasma membrane at a region reminiscent of the N-cadherin area (Fig.7F; no double staining was used).\n- Based on the known transmembrane topology of the protein, the \"integral component of ... membrane\" term was chosen.. Experimental description: Materials and methods. \"For adult mice those older than 1 mo were used.........The days when the animals were born was regarded as postnatal day 0. The study also used chicken tissue but figures for the annotation involved mouse tissue.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-0755-5899"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0938-8534"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-7351-8706"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-3185-5709"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/SYNGO_17743604e018-78cf-49fa-b3b2-c2b748a5f140",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "OR expression not satisfied:"
+        }
+      ],
+      "since_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "since_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

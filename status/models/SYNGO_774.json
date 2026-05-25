@@ -1,0 +1,106 @@
+{
+  "id": "SYNGO_774",
+  "iri": "http://model.geneontology.org/SYNGO_774",
+  "ttl_path": "models/SYNGO_774.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_774",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2024-03-14",
+    "comment": "Rationale: The creatine transporter is a plasma membrane protein localized to the soma and neuronal processes of cultured rat hippocampal neurons (Fig. 3,4).\n\nColabelling with MAP2 reveals a dendritic localization (Fig.3) and CRT co-localizes with the NR1 subunit of NMDA receptors (Fig.4) indicating a postsynaptic localization.\n\nCRT antibody was produced in rabbits and affinity-purified as described previously (Mak et al. 2009 - reference 2): \"Briefly, antibodies were prepared by immunising rabbits with a C-terminal fragment of the bovine CRT, expressed as a fusion protein with glutathione-S-transferase (GST) from the parasitic helminth, Schistosoma japonicum. GST-reactive antibodies were removed on a column containing immobilised GST. Antibodies, specific for the C-terminal 21 amino acids of the CRT were affinity-purified on a column containing immobilised GST fusion protein (GST-CC2) and stored (0.5 mg/mL) in phosphate buffer (-80 °C). The affinity-purified CRT antibodies recognise a ~70 kDa glycoprotein in membranes from human embryonic kidney (HEK) 293 cells, transiently or stably expressing the CRT and also showed strong staining of the plasma membrane of these cells by immunofluorescence microscopy.\" No KO control.. Experimental description: Briefly, E18 embryos from time-mated Wistar rats were removed from the uterus...",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-7351-8706"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-0755-5899"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-3185-5709"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0938-8534"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

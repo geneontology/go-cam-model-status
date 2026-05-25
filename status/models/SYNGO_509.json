@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_509",
+  "iri": "http://model.geneontology.org/SYNGO_509",
+  "ttl_path": "models/SYNGO_509.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_509",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-05-26",
+    "comment": "Rationale: Fig. 2c: biochemical fractionation shows TRIM3 synaptic enrichment.\nFig. 2d: TRIM3 is localized at postsynaptic site\n\nLitteral:\n\"Subcellular fractionation of rat forebrain showed TRIM3 to be particularly abundant in the light membrane fraction (P3), and sparse in the cytosol (S3) (Figure 2C). TRIM3 was also present in the Triton X-100-resistant PSD fractions (PSDI and PSD II), which corroborates its detection in the PSD by mass spectrometry [22]. However, TRIM3 is not enriched in the PSD like PSD-95 and is extracted by Sarkosyl detergent (PSDIII), indicating that TRIM3 is not tightly associated with the PSD (Figure 2B).\n\nBy immunostaining, TRIM3 was widely distributed in a micropunctate pattern throughout the cell body, axon, and dendrites of cultured hippocampal neurons (Figure 2C)\". Experimental description: Experiment of neuronal colture staining are made in rat. Biochemical fractionation are made in rat.\n\nLitteral from M&M\n\"Antibodies and biochemistry\nBiochemical fractionation of rat forebrain was performed as described previously\"\n\"Primary hippocampal neuron culture, transfection and immunocytochemistry\nPrimary hippocampal neuron cultures were prepared from embryonic day 19 (E19) rat hippocampi\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-2949-9725"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0662-9523"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

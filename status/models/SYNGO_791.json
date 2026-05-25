@@ -1,0 +1,106 @@
+{
+  "id": "SYNGO_791",
+  "iri": "http://model.geneontology.org/SYNGO_791",
+  "ttl_path": "models/SYNGO_791.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_791",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2021-01-19",
+    "comment": "Rationale: In the paper the isolation of the EAAT5, an excitatory amino acid transporter is described.\n\nIn figure 3 the uptake of 3H-L-glutamate and 3H-L-Aspertate are demonstrated in oocytes injected with the EAAT5 mRNA and voltage-clamped at -60 mV. In comparison to controls (uninjected oocytes), the uptake was typically 2- to 10-fold larger. The uptake is sodium- and voltage-dependent.\nThese data indicate that the transporter functions as a glutamate transporter.\nTable 1 summarizes specificity and kinetic values of the transporter.\n\nrule: NAS_MFCC-BP\nrationale:\nProtein has \"glutamate transmembrane transporter activity\" and is localized in the presynaptic membrane (show with high-resolution technique). The inference to term 'neurotransmitter uptake (GO:0001504)' is trivial and non-controversial.\nPinf_CC:\n[Q8JZR4] SynGO ID 790 (PMID:23049999, EM). Experimental description: The isolation of an EAAT subtype from salamander retina whose sequence differed substantially from previously reported mammalian sequences lead us to isolate the human homolog EAAT5.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-7351-8706"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-0755-5899"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0938-8534"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-3185-5709"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

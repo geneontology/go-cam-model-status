@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_3956",
+  "iri": "http://model.geneontology.org/SYNGO_3956",
+  "ttl_path": "models/SYNGO_3956.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_MF_3956",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2020-07-14",
+    "comment": "Rationale: Sclip et al provide multiple lines of evidence to demonstrate that RIMBP2 regulates BK-channels at the presynapse:\n- Using yeast-2-hybrid and immunoprecipitation it is shown that RIMBP2 interacts with BK-alpha. (Figure 1)\n-In HEK cells, RIMBP2 recruits BK-alpha to the plasma membrane (figure 1 D, E) and increases the BK-alpha mediated K+ current at lower membrane voltages (figure 4).\n-In line with the observations above, knockout of RIMBP1 and RIMBP2 (DKO) reduces the BK-mediated K+ current in the Calyx of Held (Figure 6A-H), and slow down the activation kinetics of these currents (Figure 6J-M).\n-The DKO also reduces the recruitment of BK-alpha to the presynaptic terminal (Figure 8).. Experimental description: RBP1/RBP2 conditional and constitutive DKO mice were described previously (Acuna et al, 2015, 2016). To delete RBP1 and RBP2 in the calyx of Held, conditional DKO mice were crossed with Krox-20-Cre mice (Voiculescu et al, 2000).",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-7620-2704"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-1558-1958"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

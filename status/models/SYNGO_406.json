@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_406",
+  "iri": "http://model.geneontology.org/SYNGO_406",
+  "ttl_path": "models/SYNGO_406.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_406",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-04-25",
+    "comment": "Rationale: Fig. 1: colocalization of BACE1 with synaptophysin at the light microscopic level.\nFig. 3: localization of BACE1 at the presynaptic within mossy fiber terminals terminal at the electron microscopic level.\nFig. 4: colocalization of BACE1 with synaptophysin around amyloid plaques\nin 5XFAD transgenic mouse and human AD brains.\n\nNote: BACE1 is localized at mossy fiber terminals. Therefore glutamatergic annotation is made.\n\n13/4/2017 Pim\n-Literal: \"In addition, our data suggest that BACE1 is present in vesicles, some in close proximity to synaptic active zones, although the exact identity of BACE1-containing vesicles has yet to be determined.\". Experimental description: Experiments in brain slices are from mouse. Fig. 4 shows also a staining of human brain from AD patients.\n\nLiteral M&M\n\n\"Animals\n5XFAD mice have been described previously [75] and were\nmaintained on a B6/SJL F1 hybrid background. BACE1-/-\nmice on a C57/B6 background were obtained from Jackson\nLaboratories (strain #006554). Non-transgenic agematched\nB6/SJL or C57/B6 mice were used as controls.\"\n\n\"Human immunofluorescence confocal microscopy\nHuman AD sections were processed using the same method\nas mouse,\n\n13/4/2017 Pim\n- the strongest information is presented in Fig.3 which is on mouse tissue. This I use as the annotated species.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-2949-9725"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0662-9523"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

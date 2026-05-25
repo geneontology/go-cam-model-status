@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_1580",
+  "iri": "http://model.geneontology.org/SYNGO_1580",
+  "ttl_path": "models/SYNGO_1580.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_1580",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-06-06",
+    "comment": "Rationale: Overexpression of type III (cysteine-rich domain (CRD-Nrg1); membrane-bound) form of Nrg1 increased number of GAD65-positive boutons contacting the soma of transfected hippocampal pyramidal neurons in vitro (Fig. 2d-h) and increased number of GAD65-positive boutons contacting the soma and axon initial segment of cortical pyramidal neurons in vivo. Thus, Nrg1 promotes the development of perisomatic and AIS GABAergic innervation of pyramidal neurons in vitro and in vivo. The loss of Neuregulin 1 receptor ErbB4 in cortical interneurons cell-autonomously impaired their ability to establish GABAergic synapses (Fig. 3c-e, g, h) , suggesting that Nrg1 (postsynaptic) and ErbB4 (presynaptic) signalling contributes to the establishment of GABAergic synapses onto pyramidal neurons in the cortex.. Experimental description: The generation of mice used in this study has been previously described.\n\nNote: no information on species origin of constructs",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-0912-1514"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-3670-7863"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

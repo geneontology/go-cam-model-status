@@ -1,0 +1,97 @@
+{
+  "id": "SYNGO_1707",
+  "iri": "http://model.geneontology.org/SYNGO_1707",
+  "ttl_path": "models/SYNGO_1707.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_1707",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-11-15",
+    "comment": "Rationale: The authors used confocal (figure 1a) and superresolution stimulated emission depletion (STED) microscopy (figure 1-b-d) iin situ by preparing thin sections from the mature mouse calyx of Held. Immunostaining for the active zone protein bassoon revealed punctuate signals representing sites for rapid neurotransmitter release along the cup-like calyx terminal and at small conventional boutons. Intersectin was found at the calyx terminal. High-magnification STED imaging revealed a subset of intersectin puncta that overlapped with bassoon-containing AZs whereas a large fraction of intersectin puncta was also located peripheral to the bassoon hot spots in a non random manner.\n\n17/11/2017 Pim\n- I have allowed annotation to the 'endocytic zone' because a concentration of the known endocytic protein intersectin 1 is demonstrated in close association to the active zone. Moreover the authors themselves claim as much: \"Our data indicate a role for the endocytic scaffold intersectin in fast neurotransmitter release...\". Experimental description: From the results, \"...we first explored the subsynaptic distribution of intersectin by confocal and superresolution stimulated emission depletion (STED) microscopy in situ by preparing thin sections from the mature mouse calyx of Held...\".",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-7806-5662"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

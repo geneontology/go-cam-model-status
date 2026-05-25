@@ -1,0 +1,109 @@
+{
+  "id": "SYNGO_1484",
+  "iri": "http://model.geneontology.org/SYNGO_1484",
+  "ttl_path": "models/SYNGO_1484.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_1484",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2024-03-14",
+    "comment": "Rationale: Under the electron microscope, the immunolabelling of 5-HT7 was localized to axons and axon terminals (Figs. 5-8). Axons were primarily thin and unmyelinated, but numerous thin myelinated axons were also observed (Fig. 5A,B). Two main types of axon terminals were observed: large axon terminals, mainly in lamina I, and smaller axon terminals, found preferentially in lamina II. Large axon terminals were long (up to several micrometers) and sinuous (Fig. 5C) or oblong.\nAxon terminal labelling is rarely associated with the membrane. In small terminals, the staining is often restricted to large granular vesicles containing neuropeptides. It has been suggested that the release of neuropeptides (under sustained primary afferent fiber stimulation) will allow the insertion of the receptor to the membrane.. Experimental description: Experiments were performed on adult Wistar rats in accordance with the European Community Council Directive....",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-4022-8707"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-1212-5623"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-7480-0826"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-2533-9548"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-5648-066X"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

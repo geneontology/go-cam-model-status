@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_4157",
+  "iri": "http://model.geneontology.org/SYNGO_4157",
+  "ttl_path": "models/SYNGO_4157.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_4157",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2021-01-18",
+    "comment": "Rationale: It is known that activation of opioid receptors leads to the activation of inwardly rectifying potassium channels and inhibition of voltage-gated calcium channels, leading to a decrease in neurotransmitter release (reviewed in PMID: 30301203).\n\nFigure 1. In this work the authors show that Parvalbumin expressing (PV) neurons release GABA onto pyramidal cells, and this process is modulated by presynaptic μ opioid receptors (MORs). Activating PV cells using optogenetics, the authors identify GABAergic postsynaptic currents (dissected using pharmacology) and show that pharmacological activation of MORs (using DAMGO) leads to a decrease in GABA release into pyramidal cells (Figure 1B). This activation can be blocked by naloxone pretreatment (an MOR antagonist) to show the specificity of MOR activation (Figure 1C).\n\nAs it is known that MORs depress presynaptic release by modulating voltage-gated calcium channels, MOR is annotated for \"presynaptic modulation of chemical synaptic transmission\".. Experimental description: \"For electrophysiology, mice were used 3-6 weeks (ChR2) or 2-3 weeks (NpHR) after virus injection\", \"PV-cre mice were obtained from JAX\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-9888-0928"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-1212-5623"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2345-393X"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

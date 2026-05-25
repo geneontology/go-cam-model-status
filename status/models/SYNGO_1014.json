@@ -1,0 +1,104 @@
+{
+  "id": "SYNGO_1014",
+  "iri": "http://model.geneontology.org/SYNGO_1014",
+  "ttl_path": "models/SYNGO_1014.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_1014",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-05-30",
+    "comment": "Rationale: The authors generate two peptides that bind to Hsc70, one from the co-chaperone auxilin and one from cytochrome C (although note a discrepancy in the species information). In Fig. 1 the authors demonstrate that the peptides block the uncoating of clathrin-coated vesicles (CCVs) in vitro. In figure 2 they inject the peptides into the squid (Loligo pealei) giant synapse. The peptides block neurotransmitter release measured physiologically. In Fig. 3, the authors demonstrate that the peptides block the uncoating of CCVs in the presynaptic nerve terminal.\n\n14/8/2017 Pim\n- SV uncaging role of Hsc70 is tested in a reconstituted system using bovine clathrin and Hsc70 protein and recombinant auxilin protein (unkown species) using two Hsc70 blocking peptides.\n- Direct interaction of auxilin with bovine Hsc70 is shown with SPR.\n- Function of Hsc70 peptides is show with microinjection of squid neurons.. Experimental description: The experiments involve injection of two peptide into the squid (Loligo pealei) giant synapse. The peptides block Hsc70 function in a dominant-negative manner. I can find no specific mention of the species source of the peptides. However, they list the peptide sequences and when I blast them, the auxilin peptide is 100% identical to human. Strangely, the cytochrome C peptide is related to VSVG glycoprotein and not cytochrome C.\n\n14/8/2017 Pim\n- SV uncaging role of Hsc70 is tested in a reconstituted system using bovine clathrin and Hsc70 protein and recombinant auxilin protein (unkown species) using two Hsc70 blocking peptides.\n- Direct interaction of recombinant auxilin (unkown species) with bovine Hsc70 is shown with SPR.\n- Function of Hsc70 blocking peptides on the (1) number of clathrin-coated SVs and (2) synaptic transmission process is show with microinjection of squid neurons.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-7806-5662"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/SYNGO_1014727ef3f9-c58d-43b8-ae94-872a130fc11e",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "OR expression not satisfied:"
+        }
+      ],
+      "since_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "since_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

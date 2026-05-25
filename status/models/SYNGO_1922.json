@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_1922",
+  "iri": "http://model.geneontology.org/SYNGO_1922",
+  "ttl_path": "models/SYNGO_1922.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_1922",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-12-21",
+    "comment": "Rationale: Fig. 8D-I, the figure show that S-SCAM is required for the development or maintenance of inhibitory synaptic structures containing gephyrin and VGAT by linking IgSF9b and neuroligin 2 at the inhibitory synapses\"\n\nLiteral:\n\"To see if S-SCAM is critically involved in linking IgSF9b and neuroligin 2 clusters in neurons, we tested whether S-SCAM knockdown decreases the colocalization between IgSF9b and neuroligin 2. We found that S-SCAM knockdown (sh-S-SCAM, DIV 15-20) in cultured interneurons suppressed the colocalization between IgSF9b and neuroligin 2, whereas it had no effect on the number of single IgSF9b or neuroligin 2 clusters (Fig. 8, D-G). A mutant knockdown construct that lacks the knockdown activity (sh-S-SCAM*) had no effect on the colocalization between IgSF9b and neuroligin 2. In addition, S-SCAM knockdown decreased the number of VGAT-positive gephyrin clusters (Fig. 8, H and I). These results suggest that S-SCAM is required for the close association between IgSF9b- and neuroligin 2-containing\nsubsynaptic domains in interneurons, and that S-SCAM is required for the development or maintenance of inhibitory synaptic structures containing gephyrin and VGAT.\". Experimental description: Experiments of MAGI2 knockdown with sh-interference are made in rat.\nLiteral from M&M\n\"Hippocampal neuron cultures were obtained from rat embryonic day-18 (E18) embryos as described previously (Goslin and Banker 1991)\".",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-2949-9725"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0662-9523"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

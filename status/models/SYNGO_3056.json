@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_3056",
+  "iri": "http://model.geneontology.org/SYNGO_3056",
+  "ttl_path": "models/SYNGO_3056.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_3056",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-03-29",
+    "comment": "Rationale: Fig.2: \"\n- \"At later stages of development, when neurons established synapses (DIV14), wild-type Flag-kaptin again colocalized with F-actin-rich sites. Along dendrites, these sites appeared mainly to represent F-actin-rich postsynapses, given that almost all kaptin-enriched puncta were contacted by presynaptic structures containing bassoon (a marker for presynaptic active zones) (Figure 2C).\"\n- \"The vast majority of anti-kaptin-immunolabeled puncta were not only enriched with F-actin but were additionally immunopositive for Shank2, a postsynaptic scaffold protein interacting with F-actin binding proteins;12,13 Figure 2D). \"\n\nNote: I do not think that this data is able to demonstrate localization to the actin cytoskeleton as claimed by the authors. Co-localization observed with confocal microscopy does not mean physical association. However, Kaptin is known to bind F-actin (see Additional literature) which allows for inference to the term 'postsynaptic actin cytoskeleton (GO:0098871)'.. Experimental description: - \"Primary rat hippocampal cultures were prepared and cultured as previously described\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-0593-3443"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

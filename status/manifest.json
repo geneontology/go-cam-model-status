@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "model_count": 55674,
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "name": "RDF Validity",
+      "description": "Apache Jena RIOT parse with strict + checking enabled (parity with `riot --validate`). Pass = parses cleanly with no diagnostics; fail = parses but riot reports lexical / IRI / language-tag / datatype issues; error = unparseable.",
+      "severity": "warning"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "name": "OWL Consistency",
+      "description": "Arachne reasoning over the model imported alongside go-lego. Inconsistency surfaces as individuals typed owl:Nothing.",
+      "severity": "error"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "name": "GPAD Compatibility",
+      "description": "Categorical: does this model fit GPAD's flat triple shape? 'Causal model' is not a defect — modern GO-CAMs intentionally encode causal flow that GPAD cannot represent. Backed by ShEx validation against gpad-shapes.shex.",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "name": "GO-CAM Shape",
+      "description": "ShEx validation against go-cam-shapes.shex — the structural contract every GO-CAM model is expected to satisfy (well-formed individuals, evidence on every annotated edge, references resolving to known GO/CHEBI/RO terms, etc.). Focus selection uses the SPARQL-style shape map in go-cam-shapes.shapeMap, evaluated against the model unioned with a pre-materialised GO `rdfs:subClassOf*` closure so class-membership tests can rely on a single-hop traversal.",
+      "severity": "error"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "name": "Disconnected Individuals",
+      "description": "Named individuals with no incoming or outgoing relations to other individuals (or via OWL axiom annotations).",
+      "severity": "warning",
+      "source_path": "sparql/status/disconnected_individuals.rq",
+      "columns": [
+        "individual",
+        "type"
+      ]
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "name": "Multiply Reified Edges",
+      "description": "More than one OWL axiom annotation reifies the same (subject, property, object) triple.",
+      "severity": "warning",
+      "source_path": "sparql/status/multiply_reified_edges.rq",
+      "columns": [
+        "source",
+        "property",
+        "target"
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "deleted",
+      "source_path": "sparql/filters/deleted.rq"
+    },
+    {
+      "id": "exclude",
+      "source_path": "sparql/filters/exclude.rq"
+    }
+  ]
+}

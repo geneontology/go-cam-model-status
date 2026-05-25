@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_969",
+  "iri": "http://model.geneontology.org/SYNGO_969",
+  "ttl_path": "models/SYNGO_969.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_969",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-08-10",
+    "comment": "Rationale: Abi-1 is found in the cytoplasm where it concentrates at PSDs and in the nucleus in NIH cells and also in hippocampal neurons. NMDA treatment induced an enhancement of nuclear Abi-1 staining which was accompanied by a decrease in the synaptic staining. This effect was also found in hippocampal neurons from acute rat brain slices. Moreover, WB analysis revealed an slight enrichment of Abi-1 in the nuclear fraction upon NMDA treatment. Nuclear translocation was prevented by treatment with colchicine or cytochalasinD, which suggests that the transport depends on microtubules and microfilaments. Nuclear entry seems to rely on Abi-1 phosphorylation of Y53 while synaptic localization seems to rely on the SH3 domain.\nFinally, Abi-1 influences transcriptional activity at the E-box regulated promoters in HeLa cells after EGF stimulation as part of a complex with Myc/Max.. Experimental description: - Cell culture experiments of rat hippocampal primary neurons (embryonic day-18-21; E18-21).\n- For isolation of subcellular protein factions and Western Blot analysis tissue from adult rats was homogenized.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-0575-6950"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-1585-539X"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

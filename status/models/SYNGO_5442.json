@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_5442",
+  "iri": "http://model.geneontology.org/SYNGO_5442",
+  "ttl_path": "models/SYNGO_5442.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_5442",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2023-03-17",
+    "comment": "Rationale: Figure 2: KIF2C knockdown affects spine morphology, synaptic transmission and long-term potentiation in vitro and in vivo.\n\nFigure 3-4: KIF2C knockout affects spine morphology, synaptic transmission, and long-term potentiation in vivo.\n\nFigure 6: KIF2C regulates synaptic transmission and plasticity by mediating dynamic microtubule depolymerization in dendrites and spines.\n\n\"In this study, we find that KIF2C, a dynamic microtubule depolymerization protein without known function in the nervous system, plays a pivotal role in the structural and functional plasticity of synapses and regulates cognitive function in mice. Through its microtubule depolymerization capability, KIF2C regulates microtubule dynamics in dendrites, and regulates microtubule invasion of spines in neurons in a neuronal activity-dependent manner. Using RNAi knockdown and conditional knockout approaches, we showed that KIF2C regulates spine morphology and synaptic membrane expression of AMPA receptors. Moreover, KIF2C deficiency leads to impaired excitatory transmission, long-term potentiation, and altered cognitive behaviors in mice.\". Experimental description: Results, Figure 1 legend: \"Subcellular distribution of KIF2C in mouse hippocampus.\"\n\nAntibody to KIF2C (12139-1-AP, RRID:AB_2877829) was purchased from Proteintech (Rosemont, IL).",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-4973-5732"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

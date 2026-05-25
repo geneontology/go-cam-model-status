@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_2974",
+  "iri": "http://model.geneontology.org/SYNGO_2974",
+  "ttl_path": "models/SYNGO_2974.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_2974",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-03-20",
+    "comment": "Rationale: Fig.8: \"Activity-induced AMPAR surface insertion requires DHHC5 endocytic cycling\"\n- \"Neurons expressing DHHC5 shRNA exhibited a significant reduction in the IntDen of SEP-GluA1 under basal conditions (Fig. 9a,b), in agreement with the requirement of DHHC5 for Grip1b palmitoylation and constitutive synaptic delivery of AMPARs11\"\n- \"The IntDen of SEP-GluA1 was significantly increased 20 min after cLTP in shRNA-c control cells, relative to the same clusters before stimulation (Fig. 9a,b), consistent with previous reports12,22,28,33. This activity-induced increase in SEP-GluA1 clusters was abolished in shRNA-expressing neurons (Fig. 9a,b), in agreement with the requirement for δ-catenin palmitoylation in activity-induced surface localization of AMPARs12. DHHC5 WT*, but not Y533E*, rescued the knockdown phenotype (Fig. 9a,b), indicating the requirement of DHHC5 internalization for the activity-mediated stabilization of AMPAR at the synapse. \". Experimental description: - \"Primary hippocampal neurons: Hippocampi from embryonic day 18 (E18) Sprague-Dawley rats ...\"\n- Overexpressed DHHC5 is of rat species (traced back to NM_001039338 via wrongly represented accession in the manuscript 'NM_00139388').",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0593-3443"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

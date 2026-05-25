@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_175",
+  "iri": "http://model.geneontology.org/SYNGO_175",
+  "ttl_path": "models/SYNGO_175.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_MF_175",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-06-29",
+    "comment": "Rationale: Channel characterisation in Voltage-clamp of Kv3.4 channels expressed in HEK-cells.\n\nrule: NAS_MFCC-BP\nrationale:\nProtein has voltage-gated ion channel activity and is localized in teh presynaptic membrane (show with high-resolution technique). The inference to term 'voltage-gated ion channel activity involved in regulation of presynaptic membrane potential (GO:0099508)' is trivial and non-controversial.\nPinf_CC:\n[Q63734] SyNGO ID 173 (PMID:15207333, EM). Experimental description: Identification of channels is performed in rats, see MM p.265: Tissue preparation. Neurons from the GP, STN, inferior colliculus and CA1 of hippocampus from young adult rats were acutely dissociated. For the functional aspects annotated here DNA was expressed in HEK cells, I assume this was DNA of the rat-isoform.\n\n22/2/2017 Pim:\n-Species of Kv3.2 and Kv3.1 is not explicitly stated in the M&M. The authors dissect in vivo rat currents with heterologously expressed Kv3.2 and Kv3.1 and claim \"Molecular, electrophysiological and pharmacological studies reported here suggest that a splice variant of the Kv3.4 subunit coassembles with Kv3.1 subunits in rat brain FS neurons.\". Based on this a **rat** species is a safe assumption based on \"author intent\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-9425-2935"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

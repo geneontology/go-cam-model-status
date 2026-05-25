@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_2327",
+  "iri": "http://model.geneontology.org/SYNGO_2327",
+  "ttl_path": "models/SYNGO_2327.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_2327",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-01-25",
+    "comment": "Rationale: Fig.1: \"NGL-3 expressed in non-neural cells induces functional presynaptic differentiation in contacting axons\"\nFig.3: \"Overexpression of NGL-3 in cultured neurons increases excitatory, but not inhibitory, presynaptic contacts on dendrites of transfected neurons\"\nFig.5: \"Knockdown of NGL-3 leads to decreases in the number and function of excitatory synapses\"\nFig.7: \"Soluble LAR reduces NGL-3-induced presynaptic differentiation\". Experimental description: Dissociated culture is of rat species: \" Briefly, primary hippocampal neuron cultures at 10 d in vitro (10 DIV) prepared from embryonic day 18-19 (E18-19) rats were cocultured with HEK293T cells expressing NGLs, LAR or EGFP, followed by immunostaining at 13 DIV. \"\n\n15/01/2018 Pim\n- Overexpressed LRRC4b is of rat species: \"Full-length human NGL-1 (NM_020929, amino acids 1-641) and rat NGL-3 (XM_218615, amino acids 1-709) were subcloned into pEGFP-N1 (Clontech).\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-6194-9648"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-5518-6584"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

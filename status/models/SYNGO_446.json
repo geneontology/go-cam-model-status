@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_446",
+  "iri": "http://model.geneontology.org/SYNGO_446",
+  "ttl_path": "models/SYNGO_446.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_446",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-04-26",
+    "comment": "Rationale: Fig. 6: colocalization of EPHA3 with VGAT but not with gephyrin.\n\nNote: EPHA3 is localized ro presynaptic compartment of inhibitory synapses.\n\n25/4/2017 Pim\n- Literal: \"To better define the presynaptic versus postsynaptic localization for NCAM, PSA, and EphA3 at inhibitory synapses, double immunofluorescence staining was performed using antibodies to NCAM, PSA, or EphA3 and either VGAT (inhibitory presynaptic) or gephyrin (inhibitory postsynaptic) in WT cingulate cortex (layer II/III) at P21.\" ... \"Taken together, these results are consistent with colocalization of EphA3, PSA, and NCAM140/180 at presynaptic perisomatic synaptic terminals and neuropil of GABAergic interneurons. A small amount of NCAM and PSA may additionally be present at inhibitory postsynaptic sites.\"\n- This protein has TM domain. These data are not able to resolve the plasma membrane ane therefore I did not suggest \"integral component of presynaptic plasma membrane\". Experimental description: Experiment of brain slices staining are made with mice brain\n\nLitereal fro m M&M\n\"Immunofluorescence Staining\nMice were anesthetized, perfused transcardially with 4% paraformaldehyde\n(PFA), and processed for staining\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-2949-9725"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0662-9523"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

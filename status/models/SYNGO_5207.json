@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_5207",
+  "iri": "http://model.geneontology.org/SYNGO_5207",
+  "ttl_path": "models/SYNGO_5207.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_5207",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2023-03-03",
+    "comment": "Rationale: Figure 1b, 3e: immunofluorescence imaging of hippocampal neurons stained for endogenous Dock180 (DOCK1) and PSD95 (DLG4) showed partial co-localization. Stainings of Dock180 were apposed to presynaptic synapsin-1 (SYN1). Overexpressed FLAG-Dock180 localized to dendrites and spines.\n\nFigure 4: ELMO and Dock180 (DOCK1) form a complex in hippocampal neurons and function through activating Rac1. Overexpressed Dock180 increased spinogenesis.\n\nFigure 5-7: RhoG is required for spine formation, its activation leads to increased spine head size and functions through the ELMO1/Dock180/Rac pathway.. Experimental description: M&M: \"Neuronal Culture and Transfection - Hippocampal neuron cultures were prepared from embryonic day 19 rat embryos as described previously\"\n\nantibody:\nrabbit polyclonal anti-Dock180 (1:1000, provided by Dr. Matsuda)\ngoat polyclonal anti-Dock180 antibodies (1:100, N19 and C19, Santa Cruz Biotechnology)\nrabbit polyclonal anti-ELMO1 (1:1000, provided by Dr. Ravichandran)\ngoat polyclonal anti-ELMO1 (1:2000, Abcam)\n\nplasmids:\n\"FLAG-Dock180, Dock180-ISP, RhoG, and ELMO constructs were kindly provided by Kodi Ravichandran and have been described previously (24, 25, 33).\" PMID:12134158 which ultimately leads to PMID:8657152 --> Nucleotide BLAST confirms the human gene DOCK1 was targeted. BLAST of the protein sequence in PMID:8657152 Figure 2 yields uniprot accession Q14185 (human DOCK1).\n\nThe uniprot database currently does not contain a record for Rat DOCK1, so instead of annotating the endogenous protein we annotate the overexpressed species (human).",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-4973-5732"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

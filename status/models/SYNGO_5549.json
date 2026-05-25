@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_5549",
+  "iri": "http://model.geneontology.org/SYNGO_5549",
+  "ttl_path": "models/SYNGO_5549.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_5549",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2023-11-14",
+    "comment": "Rationale: Figure 1: characterization of the Cypin protein. The peptide sequence shown here is a 100% match to the protein GDA (Guanine deaminase, p51-nedasin).\n\nFigure 3: GDA/Cypin Interacts with PDZ1 and PDZ2 of PSD-95 through a C-Terminal -SSSV* Consensus Sequence\n\nFigure 4: GDA/Cypin is co-enriched with DLG1-4 in synaptic membrane fractions prepared from rat brain.\n\nFigure 5: GDA/Cypin localizes to both pre- and postsynaptic sites in cortical neurons, as shown by immuno-EM.\n\"Though PSDs are occasionally coated with the peroxidase label, cypin immunoreactivity often occurs only in the dendritic shaft and neck of the spine and is typically excluded from the spine head and PSD (Figure 6A)\n...\nWithin axons, cypin is concentrated at the synaptic terminals, and the reaction product is often seen coating synaptic vesicles (Figure 6C). This is consistent with subcellular fractionation, which shows that cypin is expressed both pre- and postsynaptically.\". Experimental description: \"For electron microscopy, rats were ...\"\n\nantibody;\nImmunizing rabbits with a full-length GST-cypin fusion protein generated the polyclonal antiserum to cypin.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-4973-5732"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}
