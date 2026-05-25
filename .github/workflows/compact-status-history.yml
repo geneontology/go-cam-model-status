@@ -1,0 +1,42 @@
+name: Compact status-data branch history
+
+# Periodically replace `status-data` with a single fresh commit of its current
+# state. Each snapshot is complete state, so squashing loses no information —
+# this just keeps the orphan branch's pack size bounded.
+
+on:
+  schedule:
+    # Last day of every month at 03:00 UTC. (cron has no "last day of month",
+    # so we run on day 28 and the workflow itself bails out if it's not the
+    # last calendar day. Cheap enough to run monthly anyway.)
+    - cron: '0 3 28 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: status-update
+  cancel-in-progress: false
+
+jobs:
+  compact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+          ref: status-data
+          path: data
+
+      - name: Replace branch with single fresh commit
+        working-directory: data
+        run: |
+          set -e
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan compacted
+          git add -A
+          git commit -m "Compacted status snapshot @ $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git branch -M status-data
+          git push -f origin status-data

@@ -1,0 +1,13 @@
+# Match models that the curator has marked for deletion via
+# `lego:modelstate "delete"`. These remain in the repo but are not
+# candidates for review or publication, so we exclude them from all checks
+# and from the dashboard. update-status.mjs treats matched models the same
+# way it treats files removed from disk: drop the per-model JSON and the
+# index entry.
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX lego: <http://geneontology.org/lego/>
+
+ASK {
+    ?model a owl:Ontology ;
+           lego:modelstate "delete" .
+}

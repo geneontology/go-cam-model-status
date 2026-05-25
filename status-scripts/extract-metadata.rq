@@ -1,0 +1,24 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX pav: <http://purl.org/pav/>
+PREFIX lego: <http://geneontology.org/lego/>
+PREFIX in_taxon: <http://purl.obolibrary.org/obo/RO_0002162>
+
+SELECT ?title ?date ?modelstate ?deprecated ?comment ?contributor ?provider ?taxon
+WHERE {
+    ?model a owl:Ontology .
+    OPTIONAL { ?model dct:title ?title . }
+    OPTIONAL { ?model dc:title ?title . }
+    OPTIONAL { ?model dct:date ?date . }
+    OPTIONAL { ?model dc:date ?date . }
+    OPTIONAL { ?model lego:modelstate ?modelstate . }
+    OPTIONAL { ?model owl:deprecated ?deprecated . }
+    OPTIONAL { ?model rdfs:comment ?comment . }
+    OPTIONAL { ?model dc:contributor ?contributor . }
+    OPTIONAL { ?model dct:contributor ?contributor . }
+    OPTIONAL { ?model pav:providedBy ?provider . }
+    OPTIONAL { ?model in_taxon: ?taxon . }
+}

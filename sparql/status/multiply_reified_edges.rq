@@ -1,0 +1,19 @@
+#+ id: multiply_reified_edges
+#+ name: Multiply Reified Edges
+#+ description: More than one OWL axiom annotation reifies the same (subject, property, object) triple.
+#+ severity: warning
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?source ?property ?target
+WHERE {
+    ?axiom1 rdf:type owl:Axiom ;
+            owl:annotatedSource ?source ;
+            owl:annotatedProperty ?property ;
+            owl:annotatedTarget ?target .
+    ?axiom2 rdf:type owl:Axiom ;
+            owl:annotatedSource ?source ;
+            owl:annotatedProperty ?property ;
+            owl:annotatedTarget ?target .
+    FILTER(?axiom1 != ?axiom2)
+}

@@ -6,10 +6,10 @@ Sister project to [`go-cam-browser`](https://github.com/geneontology/go-cam-brow
 
 ## Architecture at a glance
 
-- **Static SPA** — deployed to GitHub Pages at `geneontology.github.io/go-cam-model-status/`.
-- **Data lives in `noctua-models`**, on a dedicated `status-data` orphan branch. The web app fetches `manifest.json`, then `index.json?v={master_sha}`, then `models/{id}.json?v={master_sha}` on drill-down — all via jsDelivr (`cdn.jsdelivr.net/gh/geneontology/noctua-models@status-data/...`) with `raw.githubusercontent.com` as fallback.
-- **Per-commit pipeline** in `noctua-models/.github/workflows/status-update.yml` runs the four checks on changed models and force-updates the orphan branch. Existing `check-models.yml` (which opens issues for new SPARQL violations) is left untouched.
-- **Extensible SPARQL checks** live under `noctua-models/sparql/status/*.rq`; each `.rq` carries `#+ key: value` frontmatter (`id`, `name`, `description`, `severity`). Adding a new query auto-creates a facet on the next page load.
+- **Static SPA** — deployed to GitHub Pages at `geneontology.github.io/go-cam-model-status/` from this repo's `main` branch.
+- **Data lives in this repo**, on a dedicated `status-data` orphan branch. The web app fetches `manifest.json`, then `index.json?v={master_sha}`, then `models/{id}.json?v={master_sha}` on drill-down — all via jsDelivr (`cdn.jsdelivr.net/gh/geneontology/go-cam-model-status@status-data/...`) with `raw.githubusercontent.com` as fallback.
+- **Producer pipeline** in `.github/workflows/status-update.yml` runs on a 15-minute cron, checks out `geneontology/noctua-models@master` as input, runs the checks against any models that have changed since the prior snapshot, and pushes the result to `status-data`.
+- **Extensible SPARQL checks** live under `sparql/status/*.rq` in this repo; each `.rq` carries `#+ key: value` frontmatter (`id`, `name`, `description`, `severity`). Adding a new query and dispatching the workflow with `full_corpus=true` populates the new check across the corpus, after which it auto-surfaces as a facet on next page load.
 
 ## Develop
 
@@ -23,7 +23,7 @@ The dev server reads `.env.development` which points the data fetcher at the bun
 To point dev at the live data instead:
 
 ```sh
-VITE_DATA_BASE=https://cdn.jsdelivr.net/gh/geneontology/noctua-models@status-data/status npm run dev
+VITE_DATA_BASE=https://cdn.jsdelivr.net/gh/geneontology/go-cam-model-status@status-data/status npm run dev
 ```
 
 ## Build
@@ -70,6 +70,6 @@ public/
 
 See `src/types.ts`. Key invariants:
 
-- `manifest.checks` is the source of truth for which checks exist. Per-check facets in the UI are generated from this list at runtime, so adding a new SPARQL check in `noctua-models/sparql/status/` automatically surfaces a facet on next page load.
+- `manifest.checks` is the source of truth for which checks exist. Per-check facets in the UI are generated from this list at runtime, so adding a new SPARQL check in `sparql/status/` automatically surfaces a facet on next page load (after the producer has run it against the corpus).
 - Each model row's `checks` is a flat `Record<checkId, status>`. The web app additionally splices each check id onto the row as a top-level field (`runtimeFields.ts:flattenChecks`) so the existing facet/search machinery treats per-check status like any other text field.
 - Per-check `since_commit` / `last_passed_commit` are maintained by the workflow when status transitions. They drive the "failing since…" links in the drill-down.

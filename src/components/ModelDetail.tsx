@@ -23,7 +23,7 @@ import {
 import useModelDetail from "../hooks/useModelDetail.ts";
 import {
   noctuaEditorUrl,
-  repoSourceUrl,
+  producerSourceUrl,
   ttlSourceUrl,
   BUILTIN_CHECK_IDS,
 } from "../constants.ts";
@@ -313,7 +313,7 @@ const FilteredBanner: React.FC<{
                 {i > 0 && ", "}
                 {def?.source_path ? (
                   <Anchor
-                    href={repoSourceUrl(def.source_path)}
+                    href={producerSourceUrl(def.source_path)}
                     target="_blank"
                     rel="noopener noreferrer"
                     size="sm"
@@ -329,10 +329,10 @@ const FilteredBanner: React.FC<{
           , so no checks were run on it.
         </Text>
         <Text size="xs" c="dimmed">
-          Filters are SPARQL ASK queries under{" "}
-          <Code>sparql/filters/</Code> in noctua-models. Models that match
-          are still indexed (so curators can confirm what's been suppressed)
-          but are not validated.
+          Filters are SPARQL ASK queries under <Code>sparql/filters/</Code>{" "}
+          in this dashboard's repo. Models that match are still indexed
+          (so curators can confirm what's been suppressed) but are not
+          validated.
         </Text>
       </Stack>
     </Alert>

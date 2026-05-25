@@ -1,0 +1,10 @@
+# Exclude models that use too much memory for validation
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX lego: <http://geneontology.org/lego/>
+
+ASK {
+    VALUES ?model {
+        <http://model.geneontology.org/R-HSA-2022377>
+    }
+    ?model a owl:Ontology .
+}

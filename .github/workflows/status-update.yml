@@ -1,0 +1,350 @@
+name: Update model status snapshot
+
+# Polls geneontology/noctua-models for new commits to master, runs the status
+# pipeline against whatever has changed since the last snapshot, and publishes
+# the result to this repo's `status-data` orphan branch.
+#
+# Anchoring the change-set to the `master_sha` recorded in the prior snapshot
+# (rather than HEAD~1) means cron poll intervals are arbitrary: any commits
+# that land between runs are caught up in the next run with no loss.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      full_corpus:
+        description: "Run all checks against the entire corpus (slow)"
+        required: false
+        default: "false"
+
+env:
+  # Ontology sources for the GO-CAM ShEx closure. Pinned here (rather than
+  # hashed from the workflow file) so trivial edits to the YAML don't bust
+  # the multi-hundred-MB ontology caches.
+  GO_LEGO_URL: "http://purl.obolibrary.org/obo/go/extensions/go-lego.owl"
+  NEO_URL: "http://purl.obolibrary.org/obo/go/noctua/neo.owl"
+  REACTO_URL: "http://purl.obolibrary.org/obo/go/extensions/reacto.owl"
+  ROBOT_IMAGE: "obolibrary/robot:latest"
+
+# Serialise runs — we read the prior `status-data` snapshot when computing
+# transitions, so a parallel run would corrupt the since_commit / last_passed
+# bookkeeping. Never drop in-flight runs.
+concurrency:
+  group: status-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout this repo (scripts, sparql, shapes)
+        uses: actions/checkout@v5
+
+      - name: Checkout noctua-models @ master
+        uses: actions/checkout@v5
+        with:
+          repository: geneontology/noctua-models
+          ref: master
+          path: noctua-models
+          fetch-depth: 1
+
+      - name: Symlink models/ → noctua-models/models/
+        # run-checks.mjs resolves model paths relative to --repo (this repo,
+        # which owns the shapes / sparql / scripts). Pointing models/ at the
+        # noctua-models checkout lets the script find both in the same tree
+        # without needing changes.
+        run: ln -snf noctua-models/models models
+
+      - name: Resolve prior master_sha from status-data
+        id: prior
+        run: |
+          set -euo pipefail
+          if ! git ls-remote --exit-code --heads origin status-data > /dev/null; then
+            echo "status-data branch does not exist; treating as cold start."
+            echo "has_prior=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git fetch --depth=1 origin status-data
+          # `set -e` + a plain pipeline doesn't fail on a non-zero left side;
+          # capture the manifest first so a read error is loud.
+          MANIFEST=$(git show origin/status-data:status/manifest.json)
+          PRIOR_SHA=$(printf '%s' "$MANIFEST" | jq -er '.master_sha')
+          # producer_commit is optional — older snapshots (notably the seed
+          # imported from noctua-models) don't have it. `// empty` falls back
+          # to empty string so missing-field doesn't fail the workflow.
+          PRIOR_PRODUCER_COMMIT=$(printf '%s' "$MANIFEST" | jq -r '.producer_commit // empty')
+          echo "Prior snapshot was built at noctua-models@$PRIOR_SHA"
+          if [ -n "$PRIOR_PRODUCER_COMMIT" ]; then
+            echo "Prior producer commit: $PRIOR_PRODUCER_COMMIT"
+          else
+            echo "Prior manifest has no producer_commit; producer-change detection disabled this run."
+          fi
+          echo "sha=$PRIOR_SHA" >> "$GITHUB_OUTPUT"
+          echo "producer_commit=$PRIOR_PRODUCER_COMMIT" >> "$GITHUB_OUTPUT"
+          echo "has_prior=1" >> "$GITHUB_OUTPUT"
+
+      - name: Compute changed model set
+        id: changed
+        env:
+          DISPATCH_FULL: ${{ inputs.full_corpus }}
+          PRIOR_SHA: ${{ steps.prior.outputs.sha }}
+          PRIOR_PRODUCER_COMMIT: ${{ steps.prior.outputs.producer_commit }}
+          HAS_PRIOR: ${{ steps.prior.outputs.has_prior }}
+        run: |
+          set -e
+          mkdir -p out
+
+          # Decide mode: full-corpus rerun, incremental diff, or no-op.
+          if [ "$DISPATCH_FULL" = "true" ]; then
+            MODE=full
+            REASON="workflow_dispatch with full_corpus=true"
+          elif [ "$HAS_PRIOR" != "1" ]; then
+            MODE=full
+            REASON="no prior snapshot found"
+          elif [ "$PRIOR_SHA" = "$(git -C noctua-models rev-parse HEAD)" ]; then
+            MODE=noop
+            REASON="noctua-models HEAD unchanged since prior snapshot"
+          elif ! git -C noctua-models fetch --depth=1 --filter=blob:none origin "$PRIOR_SHA" 2>/dev/null; then
+            MODE=full
+            REASON="prior SHA $PRIOR_SHA unreachable in noctua-models history"
+          else
+            MODE=incremental
+            REASON="incremental diff from $PRIOR_SHA"
+          fi
+
+          # Upgrade incremental → full if the producer (shapes, sparql,
+          # status-scripts) changed in THIS repo since the prior snapshot.
+          # Otherwise a new SPARQL check would land as 'unknown' for every
+          # model that hadn't been touched in noctua-models since the change.
+          if [ "$MODE" = "incremental" ] && [ -n "$PRIOR_PRODUCER_COMMIT" ]; then
+            if ! git fetch --depth=1 --filter=blob:none origin "$PRIOR_PRODUCER_COMMIT" 2>/dev/null; then
+              MODE=full
+              REASON="prior producer commit $PRIOR_PRODUCER_COMMIT unreachable; running full corpus to be safe"
+            else
+              PRODUCER_CHANGES=$(git diff --name-only "$PRIOR_PRODUCER_COMMIT" HEAD -- \
+                'gpad-shapes.shex' 'gpad-shapes.shapeMap' \
+                'go-cam-shapes.shex' 'go-cam-shapes.shapeMap' \
+                'sparql/' 'status-scripts/')
+              if [ -n "$PRODUCER_CHANGES" ]; then
+                MODE=full
+                REASON="producer changed since $PRIOR_PRODUCER_COMMIT:"
+                echo "$REASON"
+                echo "$PRODUCER_CHANGES"
+              fi
+            fi
+          fi
+          echo "MODE=$MODE — $REASON"
+
+          case "$MODE" in
+            noop)
+              : > out/changed.txt
+              : > out/deleted.txt
+              echo "full_corpus=0" >> "$GITHUB_OUTPUT"
+              ;;
+            full)
+              echo "full_corpus=1" >> "$GITHUB_OUTPUT"
+              # find, not glob: ~55K paths exceeds ARG_MAX-adjacent limits on
+              # shell expansion as the corpus grows.
+              (cd noctua-models && find models -maxdepth 1 -name '*.ttl' -type f | sort) > out/changed.txt
+              : > out/deleted.txt
+              ;;
+            incremental)
+              echo "full_corpus=0" >> "$GITHUB_OUTPUT"
+              # Let git's exit code propagate: a diff failure here used to be
+              # swallowed by `|| true`, producing an empty change set and a
+              # silent no-op forever (master_sha stuck at PRIOR_SHA).
+              git -C noctua-models diff --name-only --diff-filter=ACMR "$PRIOR_SHA" HEAD -- 'models/*.ttl' > out/changed.txt
+              git -C noctua-models diff --name-only --diff-filter=D    "$PRIOR_SHA" HEAD -- 'models/*.ttl' > out/deleted.txt
+              ;;
+          esac
+
+          echo "Changed: $(wc -l < out/changed.txt) models"
+          echo "Deleted: $(wc -l < out/deleted.txt) models"
+
+      - name: Skip if nothing changed
+        id: should_run
+        run: |
+          if [ -s out/changed.txt ] || [ -s out/deleted.txt ]; then
+            echo "run=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=0" >> "$GITHUB_OUTPUT"
+            echo "Nothing to do; exiting workflow successfully."
+          fi
+
+      - name: Set up Node
+        if: steps.should_run.outputs.run == '1'
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Compute week stamp (for cache key)
+        if: steps.should_run.outputs.run == '1'
+        id: weekstamp
+        run: echo "week=$(date -u +%G-%V)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache ontology sources (go-lego, neo, reacto)
+        if: steps.should_run.outputs.run == '1'
+        id: cache_ontologies
+        uses: actions/cache@v4
+        with:
+          path: |
+            cache/go-lego.owl
+            cache/neo.owl
+            cache/reacto.owl
+          # Refresh weekly. Keyed on the three source URLs + week, so workflow
+          # edits never bust this cache.
+          key: ontologies-${{ runner.os }}-week-${{ steps.weekstamp.outputs.week }}-${{ env.GO_LEGO_URL }}-${{ env.NEO_URL }}-${{ env.REACTO_URL }}
+
+      - name: Download ontologies (if not cached)
+        if: steps.should_run.outputs.run == '1' && steps.cache_ontologies.outputs.cache-hit != 'true'
+        run: |
+          set -e
+          mkdir -p cache
+          wget -q -O cache/go-lego.owl "$GO_LEGO_URL"
+          wget -q -O cache/neo.owl     "$NEO_URL"
+          wget -q -O cache/reacto.owl  "$REACTO_URL"
+          ls -lh cache/go-lego.owl cache/neo.owl cache/reacto.owl
+
+      - name: Pull batch images
+        if: steps.should_run.outputs.run == '1'
+        run: |
+          set -e
+          # materializer: Arachne OWL reasoning over go-lego (consistency check).
+          # jena-batch: ShEx + SPARQL + metadata + filters in one JVM pass.
+          # robot: merges the three ontologies for the ShEx closure context.
+          docker pull balhoff/materializer:latest
+          docker pull ghcr.io/balhoff/jena-batch:v0.6.0
+          docker pull "$ROBOT_IMAGE"
+
+      - name: Cache Apache Jena CLI
+        if: steps.should_run.outputs.run == '1'
+        id: cache_jena
+        uses: actions/cache@v4
+        with:
+          path: cache/apache-jena-5.6.0
+          key: apache-jena-5.6.0-${{ runner.os }}
+
+      - name: Install Apache Jena CLI (if not cached)
+        if: steps.should_run.outputs.run == '1' && steps.cache_jena.outputs.cache-hit != 'true'
+        run: |
+          set -e
+          mkdir -p cache
+          curl -L -o /tmp/jena.tar.gz \
+            "https://archive.apache.org/dist/jena/binaries/apache-jena-5.6.0.tar.gz"
+          tar -xzf /tmp/jena.tar.gz -C cache
+          rm /tmp/jena.tar.gz
+          ls cache/apache-jena-5.6.0/bin/arq
+
+      - name: Cache merged ontology (go-lego + neo + reacto)
+        if: steps.should_run.outputs.run == '1'
+        id: cache_merged
+        uses: actions/cache@v4
+        with:
+          path: cache/closure-source.owl
+          # Refresh whenever any source URL changes or the week ticks over.
+          key: closure-source-${{ runner.os }}-week-${{ steps.weekstamp.outputs.week }}-${{ env.GO_LEGO_URL }}-${{ env.NEO_URL }}-${{ env.REACTO_URL }}
+
+      - name: Merge ontologies with ROBOT (if not cached)
+        if: steps.should_run.outputs.run == '1' && steps.cache_merged.outputs.cache-hit != 'true'
+        run: |
+          set -e
+          docker run --rm \
+            -v "$PWD/cache:/work" \
+            "$ROBOT_IMAGE" \
+            robot merge \
+              --input /work/go-lego.owl \
+              --input /work/neo.owl \
+              --input /work/reacto.owl \
+              --output /work/closure-source.owl
+          ls -lh cache/closure-source.owl
+
+      - name: Cache GO subClassOf closure
+        if: steps.should_run.outputs.run == '1'
+        id: cache_closure
+        uses: actions/cache@v4
+        with:
+          path: cache/go-closure.ttl
+          # Closure depends on the merged ontology AND the CONSTRUCT query.
+          # Reuses the merged-ontology cache key as a proxy for "same inputs."
+          key: go-closure-${{ runner.os }}-week-${{ steps.weekstamp.outputs.week }}-${{ env.GO_LEGO_URL }}-${{ env.NEO_URL }}-${{ env.REACTO_URL }}-${{ hashFiles('sparql/closures/go-subclassof-closure.rq') }}
+
+      - name: Build GO subClassOf closure (if not cached)
+        if: steps.should_run.outputs.run == '1' && steps.cache_closure.outputs.cache-hit != 'true'
+        run: |
+          set -e
+          bash status-scripts/build-go-closure.sh \
+            --arq cache/apache-jena-5.6.0/bin/arq \
+            --input cache/closure-source.owl \
+            --output cache/go-closure.ttl
+          wc -l cache/go-closure.ttl
+
+      - name: Run checks on changed models
+        if: steps.should_run.outputs.run == '1'
+        run: |
+          set -e
+          mkdir -p out
+          # --repo is this repo, which contains shapes / sparql / scripts.
+          # models/ is symlinked to noctua-models/models/ so model TTL paths
+          # in out/changed.txt (e.g. "models/abc.ttl", produced by the
+          # noctua-models diff) resolve via the symlink.
+          node status-scripts/run-checks.mjs \
+            --repo "$PWD" \
+            --models-file out/changed.txt \
+            --go-lego "$PWD/cache/go-lego.owl" \
+            --go-closure "$PWD/cache/go-closure.ttl" \
+            --output out/run.json
+          echo "Wrote out/run.json ($(wc -c < out/run.json) bytes)"
+
+      - name: Prepare status-data worktree
+        if: steps.should_run.outputs.run == '1'
+        run: |
+          set -e
+          if ! git ls-remote --exit-code --heads origin status-data > /dev/null; then
+            # Cold start: create the orphan branch with an explicitly empty
+            # index and working tree. `worktree add -B` would seed both from
+            # main and rely on `git add -A` later to remove main's tree —
+            # fragile if anyone ever narrows the add. Be explicit instead.
+            git worktree add --detach data
+            cd data
+            git checkout --orphan status-data
+            git rm -rf --cached . > /dev/null 2>&1 || true
+            git clean -fdx
+            cd ..
+          else
+            git fetch origin status-data:status-data 2>/dev/null || \
+              git fetch origin status-data:refs/heads/status-data
+            git worktree add data status-data
+          fi
+
+      - name: Merge results into status-data
+        if: steps.should_run.outputs.run == '1'
+        run: |
+          set -e
+          MASTER_SHA=$(git -C noctua-models rev-parse HEAD)
+          node status-scripts/update-status.mjs \
+            --data-dir "$PWD/data" \
+            --run "$PWD/out/run.json" \
+            --master-sha "$MASTER_SHA" \
+            --producer-commit "$GITHUB_SHA" \
+            --deleted-file "$PWD/out/deleted.txt"
+
+      - name: Commit & push status-data
+        if: steps.should_run.outputs.run == '1'
+        run: |
+          set -e
+          MASTER_SHA=$(git -C noctua-models rev-parse HEAD)
+          cd data
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "status snapshot @ noctua-models@${MASTER_SHA::7}"
+          git push origin status-data

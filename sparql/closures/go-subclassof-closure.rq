@@ -1,0 +1,26 @@
+#+ id: go_subclassof_closure
+#+ name: GO rdfs:subClassOf reflexive transitive closure
+#+ description: |
+#+   Materialises the reflexive-transitive closure of `rdfs:subClassOf` over
+#+   the GO branch of go-lego, so that focus-selection queries in
+#+   go-cam-shapes.shapeMap can use `a/<rdfs:subClassOf>` (single hop) instead
+#+   of `a/<rdfs:subClassOf>*` (which Jena evaluates with worse performance
+#+   and which doesn't traverse the closure on its own without inference).
+#+
+#+   The output is intended to be unioned in as a `--shex-context go_cam=…`
+#+   auxiliary graph.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+CONSTRUCT { 
+  ?sub rdfs:subClassOf ?super .
+  ?sub rdf:type owl:Class .
+}
+WHERE {
+  ?sub rdf:type owl:Class .
+  ?sub rdfs:subClassOf* ?super .
+  FILTER(isIRI(?sub))
+  FILTER(isIRI(?super))
+}

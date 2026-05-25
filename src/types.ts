@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 // =============================================================================
-// Status data schema (mirrored by the JSON producer in noctua-models)
+// Status data schema (mirrored by the JSON producer in status-scripts/)
 // =============================================================================
 
 // Status states for a single check on a single model.
@@ -21,7 +21,7 @@ export type CheckStatus =
 export type Severity = "info" | "warning" | "error";
 
 // Built-in check kinds are reserved; SPARQL check ids are discovered from
-// noctua-models/sparql/status/*.rq frontmatter at workflow time.
+// sparql/status/*.rq frontmatter at workflow time.
 // `gpad_compatibility` uses `gpad-shapes.shex` and is informational —
 // non-conformance does not mean the model is wrong, only that it does not
 // translate cleanly to GPAD output. A future "main_shex_conformance" kind
