@@ -277,10 +277,14 @@ jobs:
         if: steps.should_run.outputs.run == '1' && steps.cache_closure.outputs.cache-hit != 'true'
         run: |
           set -e
+          # arq's in-memory model + subClassOf* path traversal across the
+          # merged ontology overflows the script's 4G default. Runner has
+          # 16 GB; leave ~4 GB for OS / docker / etc.
           bash status-scripts/build-go-closure.sh \
             --arq cache/apache-jena-5.6.0/bin/arq \
             --input cache/closure-source.ttl \
-            --output cache/go-closure.ttl
+            --output cache/go-closure.ttl \
+            --max-heap 12G
           wc -l cache/go-closure.ttl
 
       - name: Run checks on changed models
