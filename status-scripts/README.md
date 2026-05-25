@@ -8,7 +8,7 @@ Per-commit pipeline that produces the JSON snapshot consumed by [`go-cam-model-s
   - [`jena-batch`](https://github.com/balhoff/jena-batch) handles ShEx, every SPARQL `sparql/status/*.rq` query, metadata extraction, and exclusion filters in one streaming pass.
   - [`materializer`](https://github.com/balhoff/materializer) handles OWL consistency via Arachne reasoning under go-lego.
   Emits a single JSON document with all per-model results, the discovered `CheckDefinition` list, and an `excluded_ids` list of models matched by an exclusion filter.
-- [`build-go-closure.sh`](build-go-closure.sh) — wraps Apache Jena `arq` to build the materialised `rdfs:subClassOf*` closure over the ROBOT merge of `go-lego.owl`, `neo.owl`, and `reacto.owl`, with the JAXP entity-size limits disabled.
+- [`build-go-closure.sh`](build-go-closure.sh) — wraps Apache Jena `arq` to build the materialised `rdfs:subClassOf*` closure over the `riot` merge of `go-lego.owl`, `neo.owl`, and `reacto.owl`, with the JAXP entity-size limits disabled.
 - [`update-status.mjs`](update-status.mjs) — merges the run output into a `status-data` worktree. Loads the prior snapshot, applies transition rules ([`lib/transitions.mjs`](lib/transitions.mjs)) so each `(model, check)` pair carries `since_commit` / `last_passed_commit`, prunes models listed in `--deleted-file` **and** in the run's `excluded_ids`, rewrites `manifest.json` + `index.json` + `models/{id}.json`.
 - [`run-checks-local.sh`](run-checks-local.sh) — laptop wrapper for one-off / backfill runs.
 - [`extract-metadata.rq`](extract-metadata.rq) — single SELECT pulling `dct:title`, `dc:contributor`, `pav:providedBy`, `lego:modelstate`, `owl:deprecated`, `dct:date`, `RO:0002162` (in_taxon), `rdfs:comment` from a model file. Run inside jena-batch (`--metadata-query`) and aggregated row-wise by [`lib/extract-metadata.mjs`](lib/extract-metadata.mjs).
@@ -50,17 +50,17 @@ Per-commit pipeline that produces the JSON snapshot consumed by [`go-cam-model-s
 ## Running locally
 
 ```sh
-# Once: download the three source ontologies, ROBOT-merge them, build the closure.
+# Once: download the three source ontologies, riot-merge them, build the closure.
 mkdir -p /tmp/cache
 wget -q -O /tmp/cache/go-lego.owl http://purl.obolibrary.org/obo/go/extensions/go-lego.owl
 wget -q -O /tmp/cache/neo.owl     http://purl.obolibrary.org/obo/go/noctua/neo.owl
 wget -q -O /tmp/cache/reacto.owl  http://purl.obolibrary.org/obo/go/extensions/reacto.owl
-docker run --rm -v /tmp/cache:/work obolibrary/robot:latest \
-  robot merge \
-    --input /work/go-lego.owl --input /work/neo.owl --input /work/reacto.owl \
-    --output /work/closure-source.owl
+JVM_ARGS="-Xmx4G -Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0" \
+  riot --output=Turtle \
+  /tmp/cache/go-lego.owl /tmp/cache/neo.owl /tmp/cache/reacto.owl \
+  > /tmp/cache/closure-source.ttl
 bash status-scripts/build-go-closure.sh \
-    --input /tmp/cache/closure-source.owl \
+    --input /tmp/cache/closure-source.ttl \
     --output /tmp/cache/go-closure.ttl
 
 # Run on one model
@@ -98,20 +98,20 @@ These cover the parsers and transition rules (no Java/Docker/network required).
 ## Required tools
 
 - Node.js 20+
-- Docker, for three images:
+- Docker, for two images:
   - `balhoff/materializer:latest` (override via `MATERIALIZER_CMD`; `{WORKDIR}` is the bind-mount placeholder)
   - `ghcr.io/balhoff/jena-batch:v0.6.0` (override via `JENA_BATCH_CMD`; same `{WORKDIR}` placeholder)
-  - `obolibrary/robot:latest` (for the closure-source merge)
+- Apache Jena CLI on PATH (`riot` for the closure-source merge, `arq` for the closure CONSTRUCT)
 - `go-lego.owl` downloaded somewhere on disk (used by materializer for the OWL-consistency check)
-- The materialised `rdfs:subClassOf*` closure as a Turtle file (`--go-closure`), built from the ROBOT merge of go-lego + neo + reacto:
+- The materialised `rdfs:subClassOf*` closure as a Turtle file (`--go-closure`), built from a `riot` merge of go-lego + neo + reacto:
 
   ```sh
-  docker run --rm -v /tmp:/work obolibrary/robot:latest \
-    robot merge \
-      --input /work/go-lego.owl --input /work/neo.owl --input /work/reacto.owl \
-      --output /work/closure-source.owl
+  JVM_ARGS="-Xmx4G -Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0" \
+    riot --output=Turtle \
+    /tmp/go-lego.owl /tmp/neo.owl /tmp/reacto.owl \
+    > /tmp/closure-source.ttl
   bash status-scripts/build-go-closure.sh \
-      --input /tmp/closure-source.owl \
+      --input /tmp/closure-source.ttl \
       --output /tmp/go-closure.ttl
   ```
 

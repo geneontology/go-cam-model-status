@@ -25,7 +25,6 @@ env:
   GO_LEGO_URL: "http://purl.obolibrary.org/obo/go/extensions/go-lego.owl"
   NEO_URL: "http://purl.obolibrary.org/obo/go/noctua/neo.owl"
   REACTO_URL: "http://purl.obolibrary.org/obo/go/extensions/reacto.owl"
-  ROBOT_IMAGE: "obolibrary/robot:latest"
 
 # Serialise runs — we read the prior `status-data` snapshot when computing
 # transitions, so a parallel run would corrupt the since_commit / last_passed
@@ -216,10 +215,8 @@ jobs:
           set -e
           # materializer: Arachne OWL reasoning over go-lego (consistency check).
           # jena-batch: ShEx + SPARQL + metadata + filters in one JVM pass.
-          # robot: merges the three ontologies for the ShEx closure context.
           docker pull balhoff/materializer:latest
           docker pull ghcr.io/balhoff/jena-batch:v0.6.0
-          docker pull "$ROBOT_IMAGE"
 
       - name: Cache Apache Jena CLI
         if: steps.should_run.outputs.run == '1'
@@ -245,23 +242,26 @@ jobs:
         id: cache_merged
         uses: actions/cache@v4
         with:
-          path: cache/closure-source.owl
+          path: cache/closure-source.ttl
           # Refresh whenever any source URL changes or the week ticks over.
           key: closure-source-${{ runner.os }}-week-${{ steps.weekstamp.outputs.week }}-${{ env.GO_LEGO_URL }}-${{ env.NEO_URL }}-${{ env.REACTO_URL }}
 
-      - name: Merge ontologies with ROBOT (if not cached)
+      - name: Merge ontologies with riot (if not cached)
         if: steps.should_run.outputs.run == '1' && steps.cache_merged.outputs.cache-hit != 'true'
+        # riot streams triples through (no in-memory reasoning), so it merges
+        # the three multi-hundred-MB ontologies in modest heap where ROBOT
+        # OOMs. The output has multiple owl:Ontology declarations (one per
+        # input) — non-standard OWL, but Jena/arq parses it fine for the
+        # subClassOf closure CONSTRUCT.
+        env:
+          JVM_ARGS: "-Xmx4G -Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0"
         run: |
           set -e
-          docker run --rm \
-            -v "$PWD/cache:/work" \
-            "$ROBOT_IMAGE" \
-            robot merge \
-              --input /work/go-lego.owl \
-              --input /work/neo.owl \
-              --input /work/reacto.owl \
-              --output /work/closure-source.owl
-          ls -lh cache/closure-source.owl
+          cache/apache-jena-5.6.0/bin/riot \
+            --output=Turtle \
+            cache/go-lego.owl cache/neo.owl cache/reacto.owl \
+            > cache/closure-source.ttl
+          ls -lh cache/closure-source.ttl
 
       - name: Cache GO subClassOf closure
         if: steps.should_run.outputs.run == '1'
@@ -279,7 +279,7 @@ jobs:
           set -e
           bash status-scripts/build-go-closure.sh \
             --arq cache/apache-jena-5.6.0/bin/arq \
-            --input cache/closure-source.owl \
+            --input cache/closure-source.ttl \
             --output cache/go-closure.ttl
           wc -l cache/go-closure.ttl
 

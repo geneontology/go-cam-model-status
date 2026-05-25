@@ -102,7 +102,7 @@ export async function runJenaBatch(opts) {
     await copyFile(goCamMapSrc, goCamMapDst);
     if (!goClosurePath) {
       throw new Error(
-        "runJenaBatch: goClosurePath is required when skipShex is false (build it with `bash status-scripts/build-go-closure.sh --input closure-source.owl --output go-closure.ttl`; see status-scripts/README.md for the ROBOT merge step)",
+        "runJenaBatch: goClosurePath is required when skipShex is false (build it with `bash status-scripts/build-go-closure.sh --input closure-source.ttl --output go-closure.ttl`; see status-scripts/README.md for the riot merge step)",
       );
     }
     await copyFile(goClosurePath, goClosureDst);

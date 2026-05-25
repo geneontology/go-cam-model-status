@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build the rdfs:subClassOf* closure used by the GO-CAM ShEx check.
 #
-# Input is an ontology (typically the ROBOT merge of go-lego, neo, and reacto;
+# Input is an ontology (typically the riot merge of go-lego, neo, and reacto;
 # see the workflow's "Merge ontologies" step) loaded by Apache Jena arq.
 #
 # Recent JDKs enforce very small XML entity expansion limits by default. The
@@ -23,7 +23,7 @@ usage() {
 Usage: status-scripts/build-go-closure.sh --input <owl> --output <ttl>
 
 Options:
-  --input <owl>     Path to the merged ontology (go-lego + neo + reacto).
+  --input <rdf>     Path to the merged ontology (go-lego + neo + reacto).
   --output <ttl>    Where to write the materialised closure TTL. Use - for stdout.
   --query <rq>      Closure CONSTRUCT query (default: sparql/closures/go-subclassof-closure.rq).
   --arq <cmd>       Apache Jena arq command (default: arq, or ARQ_CMD env).

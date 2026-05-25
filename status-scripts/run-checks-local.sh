@@ -4,21 +4,22 @@
 #
 # Requires:
 #   - Node.js 20+
-#   - Docker, for three images:
+#   - Docker, for two images:
 #       balhoff/materializer:latest        (override: MATERIALIZER_CMD)
 #       ghcr.io/balhoff/jena-batch:v0.6.0  (override: JENA_BATCH_CMD)
-#       obolibrary/robot:latest            (for the closure-source merge)
+#   - Apache Jena CLI (riot + arq) on PATH, for the closure-source merge and
+#     the closure CONSTRUCT
 #   - go-lego.owl on disk (--go-lego) for the materializer OWL-consistency check
 #   - rdfs:subClassOf* closure TTL on disk (--go-closure) for the GO-CAM ShEx
-#     check. Build it from the ROBOT merge of go-lego + neo + reacto:
+#     check. Build it from a riot merge of go-lego + neo + reacto:
 #       wget -O /tmp/go-lego.owl http://purl.obolibrary.org/obo/go/extensions/go-lego.owl
 #       wget -O /tmp/neo.owl     http://purl.obolibrary.org/obo/go/noctua/neo.owl
 #       wget -O /tmp/reacto.owl  http://purl.obolibrary.org/obo/go/extensions/reacto.owl
-#       docker run --rm -v /tmp:/work obolibrary/robot:latest \
-#         robot merge --input /work/go-lego.owl --input /work/neo.owl --input /work/reacto.owl \
-#                     --output /work/closure-source.owl
+#       JVM_ARGS="-Xmx4G -Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0" \
+#         riot --output=Turtle /tmp/go-lego.owl /tmp/neo.owl /tmp/reacto.owl \
+#         > /tmp/closure-source.ttl
 #       bash status-scripts/build-go-closure.sh \
-#           --input /tmp/closure-source.owl \
+#           --input /tmp/closure-source.ttl \
 #           --output /tmp/go-closure.ttl
 #     The closure only changes when the source ontologies change, so cache it.
 #

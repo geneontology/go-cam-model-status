@@ -164,8 +164,8 @@ async function parseArgs(argv) {
   if (!args.skipShex && !args.goClosure) {
     process.stderr.write(
       "Missing --go-closure (required unless --skip-shex). " +
-        "Build it from the ROBOT merge of go-lego + neo + reacto via " +
-        "`bash status-scripts/build-go-closure.sh --input closure-source.owl " +
+        "Build it from a riot merge of go-lego + neo + reacto via " +
+        "`bash status-scripts/build-go-closure.sh --input closure-source.ttl " +
         "--output go-closure.ttl` (see status-scripts/README.md).\n",
     );
     process.exit(2);
