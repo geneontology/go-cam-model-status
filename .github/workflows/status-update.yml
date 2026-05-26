@@ -290,6 +290,11 @@ jobs:
 
       - name: Run checks on changed models
         if: steps.should_run.outputs.run == '1'
+        env:
+          # ubuntu-latest runners are 16 GB. jena-batch's library default
+          # (-Xmx24G) over-commits and the kernel OOM-kills the JVM. Cap to
+          # leave ~4 GB for OS / docker / materializer-bookkeeping.
+          JENA_BATCH_MAX_HEAP: "12G"
         run: |
           set -e
           mkdir -p out
@@ -297,11 +302,13 @@ jobs:
           # models/ is symlinked to noctua-models/models/ so model TTL paths
           # in out/changed.txt (e.g. "models/abc.ttl", produced by the
           # noctua-models diff) resolve via the symlink.
+          # --max-heap caps materializer (default 14G) to match.
           node status-scripts/run-checks.mjs \
             --repo "$PWD" \
             --models-file out/changed.txt \
             --go-lego "$PWD/cache/go-lego.owl" \
             --go-closure "$PWD/cache/go-closure.ttl" \
+            --max-heap 12G \
             --output out/run.json
           echo "Wrote out/run.json ($(wc -c < out/run.json) bytes)"
 
