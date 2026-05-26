@@ -7,8 +7,8 @@
 #   - Docker, for two images:
 #       balhoff/materializer:latest        (override: MATERIALIZER_CMD)
 #       ghcr.io/balhoff/jena-batch:v0.6.0  (override: JENA_BATCH_CMD)
-#   - Apache Jena CLI (riot + arq) on PATH, for the closure-source merge and
-#     the closure CONSTRUCT
+#   - Apache Jena CLI on PATH (riot + tdb2.tdbloader + tdb2.tdbquery), for
+#     the closure-source merge and the closure CONSTRUCT
 #   - go-lego.owl on disk (--go-lego) for the materializer OWL-consistency check
 #   - rdfs:subClassOf* closure TTL on disk (--go-closure) for the GO-CAM ShEx
 #     check. Build it from a riot merge of go-lego + neo + reacto:
@@ -20,7 +20,8 @@
 #         > /tmp/closure-source.ttl
 #       bash status-scripts/build-go-closure.sh \
 #           --input /tmp/closure-source.ttl \
-#           --output /tmp/go-closure.ttl
+#           --output /tmp/go-closure.ttl \
+#           --max-heap 12G
 #     The closure only changes when the source ontologies change, so cache it.
 #
 # Examples:
@@ -144,7 +145,7 @@ if [[ -n "$MODELS_FILE" || ${#MODELS[@]} -gt 200 ]]; then
     printf '%s\n' "${MODELS[@]}" >> "$TMP_LIST"
   fi
   # Use ${arr[@]+"${arr[@]}"} idiom — bare ${arr[@]} trips `set -u` when the
-  # array is empty (e.g. no --skip-* / --max-heap / --arq flags supplied).
+  # array is empty (e.g. no --skip-* / --max-heap / --jena-batch flags supplied).
   exec node status-scripts/run-checks.mjs \
     --repo "$REPO" \
     --go-lego "$GO_LEGO" \

@@ -277,11 +277,12 @@ jobs:
         if: steps.should_run.outputs.run == '1' && steps.cache_closure.outputs.cache-hit != 'true'
         run: |
           set -e
-          # arq's in-memory model + subClassOf* path traversal across the
-          # merged ontology overflows the script's 4G default. Runner has
-          # 16 GB; leave ~4 GB for OS / docker / etc.
+          # The merged ontology is too large for an in-memory arq model; the
+          # script stream-loads into TDB2 then runs the CONSTRUCT against
+          # the on-disk store. Heap is for the path traversal in the query,
+          # not for holding the input.
           bash status-scripts/build-go-closure.sh \
-            --arq cache/apache-jena-5.6.0/bin/arq \
+            --jena-bin cache/apache-jena-5.6.0/bin \
             --input cache/closure-source.ttl \
             --output cache/go-closure.ttl \
             --max-heap 12G

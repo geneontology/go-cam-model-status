@@ -8,7 +8,7 @@ Per-commit pipeline that produces the JSON snapshot consumed by [`go-cam-model-s
   - [`jena-batch`](https://github.com/balhoff/jena-batch) handles ShEx, every SPARQL `sparql/status/*.rq` query, metadata extraction, and exclusion filters in one streaming pass.
   - [`materializer`](https://github.com/balhoff/materializer) handles OWL consistency via Arachne reasoning under go-lego.
   Emits a single JSON document with all per-model results, the discovered `CheckDefinition` list, and an `excluded_ids` list of models matched by an exclusion filter.
-- [`build-go-closure.sh`](build-go-closure.sh) — wraps Apache Jena `arq` to build the materialised `rdfs:subClassOf*` closure over the `riot` merge of `go-lego.owl`, `neo.owl`, and `reacto.owl`, with the JAXP entity-size limits disabled.
+- [`build-go-closure.sh`](build-go-closure.sh) — stream-loads the `riot` merge of `go-lego.owl`, `neo.owl`, and `reacto.owl` into a temporary TDB2 store and runs the materialised `rdfs:subClassOf*` closure CONSTRUCT against it. In-memory `arq` runs out of heap on the merged dataset.
 - [`update-status.mjs`](update-status.mjs) — merges the run output into a `status-data` worktree. Loads the prior snapshot, applies transition rules ([`lib/transitions.mjs`](lib/transitions.mjs)) so each `(model, check)` pair carries `since_commit` / `last_passed_commit`, prunes models listed in `--deleted-file` **and** in the run's `excluded_ids`, rewrites `manifest.json` + `index.json` + `models/{id}.json`.
 - [`run-checks-local.sh`](run-checks-local.sh) — laptop wrapper for one-off / backfill runs.
 - [`extract-metadata.rq`](extract-metadata.rq) — single SELECT pulling `dct:title`, `dc:contributor`, `pav:providedBy`, `lego:modelstate`, `owl:deprecated`, `dct:date`, `RO:0002162` (in_taxon), `rdfs:comment` from a model file. Run inside jena-batch (`--metadata-query`) and aggregated row-wise by [`lib/extract-metadata.mjs`](lib/extract-metadata.mjs).
@@ -101,7 +101,7 @@ These cover the parsers and transition rules (no Java/Docker/network required).
 - Docker, for two images:
   - `balhoff/materializer:latest` (override via `MATERIALIZER_CMD`; `{WORKDIR}` is the bind-mount placeholder)
   - `ghcr.io/balhoff/jena-batch:v0.6.0` (override via `JENA_BATCH_CMD`; same `{WORKDIR}` placeholder)
-- Apache Jena CLI on PATH (`riot` for the closure-source merge, `arq` for the closure CONSTRUCT)
+- Apache Jena CLI on PATH (`riot` for the closure-source merge, `tdb2.tdbloader` + `tdb2.tdbquery` for the closure CONSTRUCT)
 - `go-lego.owl` downloaded somewhere on disk (used by materializer for the OWL-consistency check)
 - The materialised `rdfs:subClassOf*` closure as a Turtle file (`--go-closure`), built from a `riot` merge of go-lego + neo + reacto:
 
@@ -112,10 +112,11 @@ These cover the parsers and transition rules (no Java/Docker/network required).
     > /tmp/closure-source.ttl
   bash status-scripts/build-go-closure.sh \
       --input /tmp/closure-source.ttl \
-      --output /tmp/go-closure.ttl
+      --output /tmp/go-closure.ttl \
+      --max-heap 12G
   ```
 
-  The wrapper sets `JVM_ARGS` for `arq`, including `-Djdk.xml.maxGeneralEntitySizeLimit=0` and `-Djdk.xml.totalEntitySizeLimit=0`, because current JDK XML parser defaults reject `go-lego.owl`'s entity usage. The closure only changes when any of the source ontologies do, so re-use it across runs. The CI workflow caches it weekly alongside the source ontologies.
+  The wrapper stream-loads the merge into a temporary TDB2 store (constant memory) and runs the CONSTRUCT against it. JAXP entity-size limits are disabled in case the input is OWL/XML rather than Turtle. The closure only changes when any of the source ontologies do, so re-use it across runs; the CI workflow caches it weekly.
 
 ## Related workflows in this repo
 
