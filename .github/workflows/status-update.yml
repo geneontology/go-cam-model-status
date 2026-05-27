@@ -39,7 +39,6 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
     steps:
       - name: Checkout this repo (scripts, sparql, shapes)
         uses: actions/checkout@v5
