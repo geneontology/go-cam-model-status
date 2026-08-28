@@ -1,0 +1,110 @@
+{
+  "id": "SYNGO_3011",
+  "iri": "http://model.geneontology.org/SYNGO_3011",
+  "ttl_path": "models/SYNGO_3011.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_3011",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-03-27",
+    "comment": "Rationale: Note: COMT metabolizes dopamine to an inactive compound (3-methoxytyramine).\n\nAbstract: \"Here, we employ two types of microdialysis to study these pathways using DAT, NET and MAO blockers in conscious mice, with or without Comt gene disruption. In quantitative no-net-flux microdialysis, DA levels were increased by 60% in the PFC of COMT-knockout (ko) mice, but not in the striatum and nucleus accumbens. In conventional microdialysis studies, we showed that selective NET and MAO inhibition increased DA levels in the PFC of wild-type mice by two- to fourfold, an effect that was still doubled in COMT-ko mice. Inhibition of DAT had no effect on DA levels in either genotype. Therefore, we conclude that in the mouse, PFC COMT contributes about one half of the total DA clearance.\". Experimental description: - \"Homozygous male and female COMT-ko mice ...\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0593-3443"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/SYNGO_3011f31f117f-561f-4ff0-a9d1-f58615188961",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "Cardinality violation (min=1): 0"
+        }
+      ],
+      "since_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "since_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

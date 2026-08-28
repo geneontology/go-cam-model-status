@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_1664",
+  "iri": "http://model.geneontology.org/SYNGO_1664",
+  "ttl_path": "models/SYNGO_1664.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_1664",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-10-16",
+    "comment": "Rationale: This protein shows biochemical enrichment in the PSD fraction of mouse hippocampus, cortex and cerebellum (sTable 1) and co-localizes with HOMER1 in 3D-SIM microscopy of mouse primary hippocampal neurons.\n\nAntibodies used:\nanti-HOMER1 (1 in 1000, cat. no. 160 004, Synaptic systems)\nanti-ADGRA1 (GPR123) (1 in 250, cat. no. sc-162892, Santa cruz). Experimental description: Materials and Methods, Preparation of cellular sub-fractions:\n\"Subcellular fractions were prepared from 3-month-old C57BL6 mice as described in 41\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-4973-5732"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

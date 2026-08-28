@@ -1,0 +1,107 @@
+{
+  "id": "SYNGO_540",
+  "iri": "http://model.geneontology.org/SYNGO_540",
+  "ttl_path": "models/SYNGO_540.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_540",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-06-08",
+    "comment": "Rationale: Fig. 8; MAGI3 is concentrated on IPL sublaminae 2 and 4 were cone bipolar axons made synapses onto amacrine or ganglion dendrites. Hovewer the images do not tell us if MAGI3 is a presynaptic or a postsynaptic protein. The data only indicate that MAGI3 is a \"synaptic\" protein.\n\nLiteral\n\"Double-label immunohistochemistry revealed that MAGI-2 and MAGI-3-rich\nsublaminae are nonoverlapping, indicating that MAGI-2 and MAGI-3 are present in distinct synapses.Confocal images suggested that MAGI-2 and Sidekick-2 were present in the same synaptic puncta, as were MAGI-3 and Dscam (Fig. 8b,c,)\". Experimental description: Literal from M&M\n\"Retinal cells were dissociated from embryonic chicks at E16.\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-2949-9725"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0662-9523"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/SYNGO_54049c98b25-791d-4203-a311-8bbc94571a29",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "OR expression not satisfied:"
+        }
+      ],
+      "since_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "since_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_2794",
+  "iri": "http://model.geneontology.org/SYNGO_2794",
+  "ttl_path": "models/SYNGO_2794.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_2794",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-06-01",
+    "comment": "Rationale: Fig.3: \"Tetanus-induced nuclear accumulation of β-catenin\"\n- \"we tested the hypothesis that activity-induced Wnt release activates intracellular signaling pathways\"\n- \"Quantification of nuclear β-catenin signals of randomly selected DG granule cells showed that tetanus significantly increased β-catenin signals in the nuclei at 15 and 30 min after stimulations (Fig. 3, a-d).\"\n- \"We also found that APV completely abolished tetanus-induced nuclear accumulations of β-catenin (Fig. 3, e-h), indicating an essential role of NMDA receptors in tetanus-induced activation of the canonical Wnt/β-catenin pathway. In support of the activation of Wnt/β-catenin signaling after tetanic stimulations, we observed, based on a DNA microarray analysis,3 that tetanus up-regulated mRNAs of several Wnt target genes (Fig. 3m); these Wnt target genes included Dll1 (41, 42), Wisp-2 (43), Cldn1 (44), Fas (45), and CDD44 (46).\"\n- \"we investigated whether blockade of released Wnts can abolish tetanus-induced nuclear accumulation of β-catenin. To this end, we treated hippocampal slices with purified Frizzled-8-Fc (5 μg/ml), which is a Wnt scavenger (47). The results showed that Frizzled-8-Fc treatment abolished tetanus-induced nuclear accumulation of β-catenin (Fig. 3, i-l). \\\". Experimental description: - \"Hippocampal slices (400 μm) were prepared from 3-4-week mice...\"\n- Species of recombinant Wnt3a used in Fig.5 is not stated in the paper.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0593-3443"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_4065",
+  "iri": "http://model.geneontology.org/SYNGO_4065",
+  "ttl_path": "models/SYNGO_4065.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_4065",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2021-01-18",
+    "comment": "Rationale: The paper uses high-resolution membrane capacitance (Cm) measurement combined with Ca2+-uncaging stimuli to monitor the effect of Unc31 KO in DCV exocytosis (as described in PMID:18031683).\n\nFigure 1A: Under Step-like elevations in intracellular calcium, membrane capacitance was significantly reduced in Unc31 mutant (unc-31e928) relative to WT indicating that Unc31 mutants defect exocytosis in ALA neurons of C. elegans. The exocytotic defect was fully rescued by reintroduction of full-length unc-31 cDNA.. Experimental description: The 3780-bp unc-31 cDNA (derived from PMID: 16272411) under the control of the rab-3 promoter was constructed for genetic rescue. The 1.2 kb rab-3 promoter was amplified by PCR and subcloned to pPD49.26 (1997 Fire Lab Vector Kit) to gain pPD49.26-Prab-3.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-2916-7616"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

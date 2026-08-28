@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_2103",
+  "iri": "http://model.geneontology.org/SYNGO_2103",
+  "ttl_path": "models/SYNGO_2103.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_2103",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-12-11",
+    "comment": "Rationale: Fig.2,3; The authors use both a dom neg FLRT3 protein and a shRNA knockdown and observe a reduction in the number of exc. synapses. The membrane adhesion part of FLRT3 with LPHN3 is shown directly by co-cultured LPHN3-GFP expressing neurons and FLRT3 expressing HEK cells that induces clustering of LPHN3.. Experimental description: from Supplemental Experimental Procedures;\n\"Hippocampal neurons were cultured from P0 Long-Evans rats (Charles\nRiver) and plated on poly-D-lysine (Millipore), and laminin (Invitrogen) coated\nchamber slides (Nalge Nunc International).\"\n\nOverexpressed protein: \"Full-length cDNAs encoding mouse Flrt1, Flrt2, Flrt3, and Lphn3 (accession numbers BC070403, BC096471, BC052043, and BC088989, respectively) and a partial Lphn1 cDNA (BC085138) were purchased from Thermo Scientific/Open Biosystems\"\n\n11/12/2017 Pim\n- Because the most important data is obtained with the overexpressed mouse protein, I use mouse as selected species.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-4973-5732"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

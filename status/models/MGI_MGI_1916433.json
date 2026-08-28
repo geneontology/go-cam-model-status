@@ -1,0 +1,128 @@
+{
+  "id": "MGI_MGI_1916433",
+  "iri": "http://model.geneontology.org/MGI_MGI_1916433",
+  "ttl_path": "models/MGI_MGI_1916433.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "C1qtnf2 (MGI:MGI:1916433)",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2026-03-12",
+    "comment": "Automated change 2026-03-12: GO:0005615 replaced by GO:0005576",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-5501-853X"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-9796-7693"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-7476-6306"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-9990-8331"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-2689-5511"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "http://informatics.jax.org"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_1916433/f14cec0a-09f5-4b05-9b1c-015395fa9df0",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/InformationBiomacromolecule",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_1916433/fe70e706-c51f-4484-860e-819b4f13f3cf",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/CellularComponent",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_1916433/98d611d5-d0e1-487c-a464-a99472bedaca",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/CellularComponent",
+          "reason": "Cardinality violation (min=1): 0"
+        }
+      ],
+      "since_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "since_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

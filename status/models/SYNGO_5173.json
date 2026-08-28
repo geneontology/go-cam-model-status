@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_5173",
+  "iri": "http://model.geneontology.org/SYNGO_5173",
+  "ttl_path": "models/SYNGO_5173.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_5173",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2024-03-14",
+    "comment": "Rationale: Figure 2: electron microscopy of immunoperoxidase labeling for CB2 receptors (CB2-R, gene CNR2) in hippocampal neurons showed localization to the plasma membrane of dendrites and postsynapses. No presynaptic localization was observed.\n\nBased on the known transmembrane topology of this protein, \"integral component of ... membrane\" term was selected.\n\nauthors comment on non-synaptic localization:\n\"CB2-R immunoreactivity (CB2-IR) was observed as diffused electron-dense deposits in some but not all neuronal cell bodies throughout the analyzed area of the hippocampus. In those neuronal cell bodies where CB2-IR was present, it was mostly associated with the rough endoplasmic reticulum as well as with the Golgi apparatus, indicating its endogenous synthesis (Fig. 2A). In the same area, CB2-IR was also present in small and medium-size dendrites (Fig. 2B, C, and D), but it was not observed either in axons or axon terminals (Fig. 2B and C).\". Experimental description: M&M: \"A total of 6 male Sprague-Dawley rats (weighing 220-250 g) were used for these studies.\"\n\nThe CB2-R antibody source is not mentioned in the paper, but authors do describe its specificity in Figure 1",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-4973-5732"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_192",
+  "iri": "http://model.geneontology.org/SYNGO_192",
+  "ttl_path": "models/SYNGO_192.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_MF_192",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-06-29",
+    "comment": "Rationale: Voltage clamp experiments in the Calyx of Held using the specific blocker for Kv1.2 TsTX-Kalpha. Note that in this study the Kv1.2 channels are presynaptically very close to but not in the Calyx terminal.\n\nrule: NAS_MFCC-BP\nrationale:\nProtein has voltage-gated ion channel activity and is localized in teh presynaptic membrane (show with high-resolution technique). The inference to term 'voltage-gated ion channel activity involved in regulation of presynaptic membrane potential (GO:0099508)' is trivial and non-controversial.\nPinf_CC:\n[P63142] SyNGO ID 183 (PMID:14614103, confocal). Experimental description: MM: p.28: Cochlear nucleus and brainstem slices (100-150 mm thick) were prepared as previously described (Rusznak et al. 1997; Dodson et al. 2002). 8-14 day old Wistar and Lister Hooded rats were killed by decapitation in accordance with the UK Animals -- Highlighted 15 Feb 2017",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-9425-2935"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "SYNGO_1058",
+  "iri": "http://model.geneontology.org/SYNGO_1058",
+  "ttl_path": "models/SYNGO_1058.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_1058",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-08-23",
+    "comment": "Rationale: GEP100/BRAG2/IQSEC1 localizes to glutamatergic postsynaptic specializations in the inner plexiform layer of the mouse retina. Immunohistochemical analysis demonstrated a strong co-localization of the immunoreactivity of BRAG2 with PSD-95 (Fig. 5A-E) and AMPA receptors (Fig. 5K-O), but not with gephrin, a marker of inhibitory postsynapses (Fig. 5F-J). The presence of BRAG2 at excitatory postsynapses was confirmed by pre-embedding immuno EM, showing that BRAG2 localizes to AMPA-containing postsynaptic processes receiving input from glutamatergic bipolar ribbon synapses in the IPL (Fig. 7).\n\nThe guinea pig antibody against BRAG2 was generated in the study and tested for its specificity by Western Blot and by ICC after expression of the protein in COS-7 cells (Fig. 1). The antibody detects three BRAG2 isoforms or slice variants, but exhibits no cross-reactivity with BRAG1 or -3.. Experimental description: Under deep anesthesia with pentobarbital, C57BL/6 mice were decapitated and the eyes were quickly enucleated.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-0938-8534"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-7351-8706"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-3185-5709"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-0755-5899"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

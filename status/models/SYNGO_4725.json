@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_4725",
+  "iri": "http://model.geneontology.org/SYNGO_4725",
+  "ttl_path": "models/SYNGO_4725.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_4725",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2022-07-31",
+    "comment": "Rationale: Figure 4: Confocal imaging of hippocampal neuronal cultures with co-staining for Homer1c-mCherry and EPS15-GFP show this protein is localized at the postsynapse. Instead of GFP tagging, endogenous EPS15 was also tagged using CRISPR/Cas-9.\n\nFigure 5: time-lapse experiments on neurons co-expressing Homer1c and fluorophore-tagged EPS15 showed high association with PSDs.\n\nFigure 6: to dissect the spatial organization of endocytic proteins relative to the clathrin structure at\nthe endocytic zone (EZ), authors used two-color single-molecule localization microscopy (SMLM). Halo-CLCa co-transfected with GFP-tagged EPS15 showed that it was often distributed in smaller patches around and sometimes within the EZ marked by CLCa.. Experimental description: M&M: \"Hippocampal cultures were prepared from brain of embryonic day 18 (E18) Wistar rats (both genders) as described before (Scheefhals et al., 2019)\"\n\n\"The knock-in constructs for GFP-Eps15, GFP-Itsn1 and GFP-Dyn2 were designed and cloned as described previously (Willems et al., 2020)\"\n\nGFP-Eps15 was a gift from Dr. Van Bergen en Henegouwen.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-4973-5732"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

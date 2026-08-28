@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_4736",
+  "iri": "http://model.geneontology.org/SYNGO_4736",
+  "ttl_path": "models/SYNGO_4736.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_4736",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2022-08-02",
+    "comment": "Rationale: Figure 2-4: monitoring SV endocytosis using Synaptophysin-pHluorin showed pharmacological inhibition of endosomal PI(3)P synthesis in hippocampal neurons caused impaired SV endocytosis in (stimulated) synapses.\n\nAuthors conclude; \"These data show that PI(3)P depletion perturbs SV endocytosis and reduces presynaptic release probability.\"\n\nAs a control, selective inhibition of VPS34 by the well-established specific small molecule inhibitor VPS34IN1 (Bago et al, 2014, PMID:25177796; Ketel et al, 2016, PMID:26760201) effectively reduced somatic and synaptic PI(3)P to nearly undetectable levels (Figure S1).. Experimental description: M&M: \"Mice used for all experiments (C57BL/6 strain) had a normal health and immune status and were regularly checked for standard pathogens.\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-4973-5732"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

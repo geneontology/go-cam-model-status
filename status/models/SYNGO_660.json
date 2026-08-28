@@ -1,0 +1,106 @@
+{
+  "id": "SYNGO_660",
+  "iri": "http://model.geneontology.org/SYNGO_660",
+  "ttl_path": "models/SYNGO_660.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_660",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2024-03-14",
+    "comment": "Rationale: Fig.3\nNTT4/RXT-1 localizes to synaptic vesicles in striatal subcellular fractions from rat synaptosomes.\n\nThe pattern of NTT4/RXT-1 immunoreactivity (Western Blot) is similar to the one of the synaptic vesicle protein synaptophysin (Fig 3).\n\nAntibody: purified rb polyclonal anti-Rxt1 (No KO control, but specificity was tested in an earlier study - see link above)\n\nFig.4-8\nTwo procedures were used for immunolabelling: immunoperoxidase and silver-intensified immunogold.\n\nAntibody: purified rb polyclonal anti-Rxt1 (No KO control, but specificity was tested in an earlier study - see link above).\n\n6/6/2017 Pim\n- Protein has TM domains (Uniprot) justifying an \"integral component... \" extension.. Experimental description: FIG. 3. Western blotting detection of Rxt1, RDAT and synaptophysin in rat striatal subcellular fractions. Rat striatal subcellular fractions were prepared...\n\nFig.4-8\nAdult male Sprague-Dawley rats (250 ± 50 g) were deeply anaesthetized by sodium pentobarbital (50 mg/kg, i.p.) and perfused...",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-7351-8706"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-0755-5899"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-3185-5709"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0938-8534"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "MGI_MGI_105384",
+  "iri": "http://model.geneontology.org/MGI_MGI_105384",
+  "ttl_path": "models/MGI_MGI_105384.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "Hspa8 (MGI:MGI:105384)",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2026-03-31",
+    "comment": "Automated change 2025-04-10: GO:0051085 replaced by GO:0006457",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-5501-853X"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-9796-7693"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-7476-6306"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-2689-5511"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-3394-9805"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "http://informatics.jax.org"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_105384/2313b3c4-6942-4b1c-bff1-32d2beb0914c",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/InformationBiomacromolecule",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_105384/2a686aa6-9449-4889-883b-6950e10c60d2",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_105384/2750510f-d861-4423-935f-906169b4f25d",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_105384/5e6ba65f-57b6-4b89-bbf9-c69a16f07642",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/CellularComponent",
+          "reason": "Cardinality violation (min=1): 0"
+        }
+      ],
+      "since_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "since_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

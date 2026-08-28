@@ -1,0 +1,113 @@
+{
+  "id": "SYNGO_1377",
+  "iri": "http://model.geneontology.org/SYNGO_1377",
+  "ttl_path": "models/SYNGO_1377.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_1377",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2017-11-02",
+    "comment": "Rationale: Fig4 and Fig5 show immunoreactivity in the dendrite and postsynaptic compartment of PAKalpha in hippocampus and neocortex. The labelling is not so prominent in proximity of the PSD. In Fig7 the localization of the ultrastructural label is quantified, less than 5% were located in presynaptic zones of axon terminals and 10% on the PSD itself. Approximately 60% of gold particles for both αPAK were present in a perisynaptic location the area within 45 nm from the dendritic cell membrane and 200 nm from the edge of the PSD.. Experimental description: Macaque monkey. M&M:\"Two each of adult male or female monkeys (Macaca fascicularis)..\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-5259-4945"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/SYNGO_1377cf47b78d-da27-4a8e-9415-b9b4d3e2c80e",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/SYNGO_1377c4710dd4-72e3-4e63-8450-c67e5bec7a64",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "OR expression not satisfied:"
+        }
+      ],
+      "since_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "since_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

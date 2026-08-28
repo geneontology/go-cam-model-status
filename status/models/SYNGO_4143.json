@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_4143",
+  "iri": "http://model.geneontology.org/SYNGO_4143",
+  "ttl_path": "models/SYNGO_4143.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_4143",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2021-01-18",
+    "comment": "Rationale: Figure 2. By performing an ultrastructural analysis of small glutamatergic spine synapses in 4-5-week-old cultured hippocampal slices obtained from Ctbp1 KO mice and their wild-type (WT) siblings, the authors identify that loss of CtBP1 does not affect the overall number of SVs in the presynaptic terminals (table S1) but, rather, triggers their redistribution from membrane-distal to membrane-proximal areas. This does not occur when counting the number of SVs within 0-2 nm of the active zone but does occur when counting the number of SVs within 0-5 or 0-40 or 0-100 nm of the active zone (table S1)\n\nAuthors also indicate that CtBP1 regulates the size of docked SVs (SV diameter of docked SVs within 0-2 nm of AZ is larger in CtBP1 KO synapses, table S1).. Experimental description: Cells and tissues used in this study were obtained from Wistar rats, Sprague-Dawley rats, C57BL/6N mice and Ctbp1tm1Sor (Ctbp1 KO) mouse strain (Hildebrand and Soriano, 2002) backcrossed to C57BL/6N. Animals of both sexes were used.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-2345-393X"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-1212-5623"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-9888-0928"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

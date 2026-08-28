@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_2352",
+  "iri": "http://model.geneontology.org/SYNGO_2352",
+  "ttl_path": "models/SYNGO_2352.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_2352",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-01-26",
+    "comment": "Rationale: From Results section:\n\n\"In 14-3-3ζ062-/- mice, misrouted axons also formed aberrant synapses within the stratum pyramidale (Figure 6). Visualization of synaptic boutons by golgi stain further revealed notable differences in synapse formation in CA3. In control animals, large spine excrescences on the proximal region of the apical dendrites were followed by fine-calibre dendritic branches. In pyramidal neurons of 14-3-3ζ062-/- mice, the dendritic tree appeared to have similar numbers of branch points but had thorny excrescences from the misrouted mossy fibre tracts on both proximal and distal apical dendrites of all mice examined.\". Experimental description: From Subjects and Methods section:\n\n\"14-3-3ζGt(OST062)Lex and 14-3-3ζGt(OST390)Lex mutant mice carrying gene trap constructs that contain the βGeo reporter gene were derived from Lexicon Genetics ES cell lines OST062 and OST390, respectively. The gene trap vector in 14-3-3ζGt(OST062)Lex mice inserted into the first intron of 14-3-3ζ, whereas the gene trap vector in 14-3-3ζGt(OST390)Lex mice inserted into the second intron of 14-3-3ζ. ES cell lines were amplified and injected into SV129 blastocysts. Resulting germ line transmitting males were either maintained in the SV129 background or backcrossed in to the C57/Bl6 and BALBC backgrounds over six generations. \"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-6893-6177"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-5265-6306"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

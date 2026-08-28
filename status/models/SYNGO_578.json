@@ -1,0 +1,106 @@
+{
+  "id": "SYNGO_578",
+  "iri": "http://model.geneontology.org/SYNGO_578",
+  "ttl_path": "models/SYNGO_578.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_578",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-06-01",
+    "comment": "Rationale: Postsynaptic knock-down (KD) of Complexin-1 and -2 (shRNA stereotactic in vivo injection into CA1 region of the hippocampus) blocks LTP (Fig. 1 F), indicating that Complexin plays a role in postsynaptic membrane fusion events underlying the exocytosis of AMPA receptors during LTP.\n\nNMDA-Receptor mediated LTD is unaffected by postsynaptic Complexin KD (Fig. 1 H).\n\nBlock of LTP can be rescued by expression of a shRNA-resitant full-length Complexin-1 variant (Fig. 1 G).\n\nBasal synaptic transmission is not affected by postsynaptic Complexin KD in slices (Fig.2) and cultures (Fig 4B), indicating that Complexin only regulates AMPA-Receptor exocytosis.. Experimental description: Stereotaxic injections of lentiviruses were made into the CA1 region of P18-22 C57BL/6 mice ...",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-0755-5899"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-7351-8706"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-0938-8534"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-3185-5709"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

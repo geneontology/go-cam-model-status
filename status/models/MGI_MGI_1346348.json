@@ -1,0 +1,161 @@
+{
+  "id": "MGI_MGI_1346348",
+  "iri": "http://model.geneontology.org/MGI_MGI_1346348",
+  "ttl_path": "models/MGI_MGI_1346348.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "Taf7 (MGI:MGI:1346348)",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2019-09-16",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-9796-7693"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-5501-853X"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0003-2689-5511"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-7476-6306"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "http://informatics.jax.org"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        }
+      ],
+      "since_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "since_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_1346348/1466d93e-5c08-48f7-9ecf-ed78539f67a2",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/InformationBiomacromolecule",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_1346348/c0b84d1a-0e1e-47f6-9496-818b6a295656",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_1346348/8f9dfb0a-cf6c-4b51-8c83-796275512bd5",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/CellularComponent",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_1346348/6ba97729-e6e7-4292-962f-a79ec285f759",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/CellularComponent",
+          "reason": "Cardinality violation (min=1): 0"
+        }
+      ],
+      "since_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "since_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

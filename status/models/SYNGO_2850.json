@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_2850",
+  "iri": "http://model.geneontology.org/SYNGO_2850",
+  "ttl_path": "models/SYNGO_2850.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_BP_2850",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-03-09",
+    "comment": "Rationale: Fig.3: \"Epac2 interacts with GluR2/3-containing AMPAR and removes them from spines\"\n- \"Following 8-CPT treatment, GluR2/3 content became significantly reduced in spines (Fig. 3b), and increased in shaft clusters. These effects were specifically dependent on Epac2; RNAi-mediated knockdown prevented 8-CPT-induced GluR2/3 removal from spines (Fig. 3c) (*P<0.01). RNAi expression did not alter GluR2/3 spine content, suggesting that Epac2 activation is only involved in GluR2/3 removal from synapses\"\n\nFig.4: \"Epac2 activation depresses AMPAR-mediated synaptic transmission\"\n- \"To determine the functional outcome of this reduction in GluR2/3 content in spines, we examined the effects of 8-CPT on AMPAR-dependent miniature excitatory postsynaptic currents (mEPSCs) (Fig. 4). Incubation of neurons with 8-CPT (50 uM, 1 hr) resulted in a robust reduction of mean amplitudes (34%) and frequencies (59%) of AMPAR-mediated mEPSCs (Fig. 4a) (*P<0.05), resulting in a shift in the distribution of mEPSC amplitudes toward smaller values. RNAi-knockdown of Epac2 in postsynaptic neurons prevented 8-CPT-mediated reduction in basal mean mEPSC amplitude (Fig. 4a)\". Experimental description: - \"Dissociated cultures of primary cortical neurons were prepared from E18 Sprague-Dawley rat embryos and cultured as described1.\"\n- \"Coimmunoprecipitation from cortical pyramidal neurons were carried out essentially as described above...\"",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-0593-3443"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2286-1587"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

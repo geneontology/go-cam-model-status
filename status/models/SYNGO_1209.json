@@ -1,0 +1,100 @@
+{
+  "id": "SYNGO_1209",
+  "iri": "http://model.geneontology.org/SYNGO_1209",
+  "ttl_path": "models/SYNGO_1209.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_MF_1209",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2018-06-29",
+    "comment": "Rationale: electrophysiological characterisation of GluR1 subunit in HEK cells using WC patch clamp.\n\nrule: NAS_MFCC-BP\nrationale:\nProtein has ligand-gated ion channel receptor activity and is localized in the presynaptic membrane (shown with high-resolution technique). The inference to term ligand-gated ion channel activity involved in regulation of presynaptic membrane potential (GO:0099507) is trivial and non-controversial.\nPinf_CC:\n[P19490] SyNGO ID 1203 (PMID:15610164, EM). Experimental description: Plasmids and mutagenesis. cDNAs for wild-type GluRAi (flip) and GluRAo (flop) in CMV expression vectors were generous gifts of Dr. Peter Seeburg (Heidelberg, Germany). Point mutations were made in pBS/GluRAi by dut-ung- oligonucleotide missense mutagenesis (Bio-Rad Muta-Gene Phagemid In Vitro Mutagenesis Kit, Version 2; Bio-Rad, Hercules, CA) and then shuttled into the CMV expression clone using the BspE13BspE1 (New England Biolabs, Beverly, MA) fragment of GluRA (nt 1777-2320), after which the sequence of the mutation was confirmed. S750N, S750Q, GluRAi[io], and GluRAo[oi] were described previously (Partin et al., 1995). All cDNAs were purified through two cesium chloride gradients before transfection.\n\n29/6/2018 Pim\n- I have selected 'human' as the species of the expressed protein. Since using a weaker NAS mechanism for annotation correct species assignment is not so important.",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-9425-2935"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2514-0216"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

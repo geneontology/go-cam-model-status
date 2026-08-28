@@ -1,0 +1,357 @@
+{
+  "id": "MGI_MGI_102673",
+  "iri": "http://model.geneontology.org/MGI_MGI_102673",
+  "ttl_path": "models/MGI_MGI_102673.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "Lhx3 (MGI:MGI:102673)",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2022-04-14",
+    "comment": "Automated change 2022-04-14: <http://purl.obolibrary.org/obo/EMAPA_16525> replaced_by <http://purl.obolibrary.org/obo/EMAPA_16092>",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0003-3394-9805"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-5501-853X"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0001-7476-6306"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "http://informatics.jax.org"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        }
+      ],
+      "since_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "since_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/c9a29102-daa5-42cc-ab1f-26ef544110e1",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/e66d7227-0d8a-4283-8e97-7fb612132e5a",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/a3d7afe7-def9-4149-bebf-2400516a3f41",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/3ad38507-b5e1-4985-84d1-12da438fba1a",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/MolecularFunction",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/78011b9c-0155-4e44-bb4f-11fc928ab439",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/BiologicalProcess",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/cd847f48-8fb1-48ad-95be-d070f4c5571d",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/BiologicalProcess",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/4e164695-4961-4287-8ffe-67b4b445dfb1",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/BiologicalProcess",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/7641ea53-4fa7-4262-a201-af82a79ef25a",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/BiologicalProcess",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/304f6d43-f7c0-4d01-874e-c4294c8b4c4f",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/BiologicalProcess",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/6e6c55dd-34fd-40c3-bc3e-4a46d27e00d0",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/AnatomicalStructureDevelopment",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/4e164695-4961-4287-8ffe-67b4b445dfb1",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/CellDifferentiation",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/7641ea53-4fa7-4262-a201-af82a79ef25a",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/CellFateSpecification",
+          "reason": "Cardinality violation (min=1): 0"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "http://model.geneontology.org/MGI_MGI_102673/cd847f48-8fb1-48ad-95be-d070f4c5571d",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/CellularComponentOrganization",
+          "reason": "Cardinality violation (min=1): 0"
+        }
+      ],
+      "since_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "since_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

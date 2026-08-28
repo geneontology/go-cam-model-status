@@ -1,0 +1,103 @@
+{
+  "id": "SYNGO_4682",
+  "iri": "http://model.geneontology.org/SYNGO_4682",
+  "ttl_path": "models/SYNGO_4682.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "SYNGO_CC_4682",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2024-03-14",
+    "comment": "Rationale: Authors used primary cultures from mouse hippocampal neurons to stain for PSD95 and Notch1 (Figure 1). There is co-localization between Notch1 and PSD95 (Figure 1C), while co-staining with synaptophysin is not so extensive (Figure S1B). Additionally, authors isolate postsynaptic densities biochemically and see increased Notch1 levels by western blot (Figure 1F).\n\nIn Figure 4A, authors confirm the antibody specificity in Notch1 conditional knock out by observing a loss of staining in CA1 neurons at the hippocampus.\n\n\"integral component of ... membrane\" term was selected based on protein's known transmembrane topology.. Experimental description: from M&M: \"All mice were maintained in accordance with the Institutional\" ...\n\nAntibodies used to detect Notch1:\nrabbit anti-NICD1 (Cat. No. 2421, Cell Signaling)\ngoat anti-Notch1 (Cat. No. sc-6014, Santa Cruz Biotechnology)\nrabbit anti-Notch1 (Cat. No. 07-220, Millipore)\nmouse anti-Notch1 (Cat. No. N6786, Sigma)\n\nUnless use of the anti-NICD1 antibody is indicated, the goat anti-Notch1 was used for immunostaining of cells and tissue sections, and the mouse anti-Notch1 was used for Western blots",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0002-1212-5623"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-9888-0928"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-2345-393X"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "https://syngo.vu.nl"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}

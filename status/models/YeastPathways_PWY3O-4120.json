@@ -1,0 +1,277 @@
+{
+  "id": "YeastPathways_PWY3O-4120",
+  "iri": "http://model.geneontology.org/YeastPathways_PWY3O-4120",
+  "ttl_path": "models/YeastPathways_PWY3O-4120.ttl",
+  "master_sha": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+  "generated_at": "2026-05-07T15:05:09.385Z",
+  "metadata": {
+    "title": "tyrosine biosynthesis - imported from: Saccharomyces Genome Database",
+    "modelstate": "production",
+    "deprecated": false,
+    "date": "2024-08-09",
+    "comment": "Imported from Saccharomyces Genome Database: https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?object=PWY3O-4120",
+    "contributors": [
+      {
+        "orcid": "https://orcid.org/0000-0001-5472-917X"
+      },
+      {
+        "orcid": "GOC:sgd_curators"
+      },
+      {
+        "orcid": "https://orcid.org/0000-0002-3726-7441"
+      }
+    ],
+    "providers": [
+      {
+        "iri": "http://www.yeastgenome.org"
+      }
+    ],
+    "taxon": null,
+    "taxon_label": null
+  },
+  "checks": [
+    {
+      "id": "rdf_valid",
+      "kind": "rdf_valid",
+      "label": "RDF Validity",
+      "severity": "warning",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 66,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120SmallMolecule49565> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 77,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120SmallMolecule49512> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 92,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120BiochemicalReaction49552> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 105,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120Protein49572> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 124,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120SmallMolecule49445> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 135,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120SmallMolecule49459> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 144,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120SmallMolecule49473> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 155,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120SmallMolecule49426> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 180,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120BiochemicalReaction49410> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 195,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120BiochemicalReaction49575> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 203,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120Protein49482> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 214,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120SmallMolecule49542> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 223,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120SmallMolecule49527> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 232,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120SmallMolecule49499> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 247,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120BiochemicalReaction49485> Port is empty - omit the ':'"
+        },
+        {
+          "kind": "riot_diagnostic",
+          "severity": "WARN",
+          "line": 260,
+          "col": 51,
+          "message": "Unwise IRI: <http://http://pathway-2a.yeastgenome.org:8080//YEAST/pathway-biopax?type=3%38object=PWY3O-4120Protein49549> Port is empty - omit the ':'"
+        }
+      ],
+      "since_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "since_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "owl_consistency",
+      "kind": "owl_consistency",
+      "label": "OWL Consistency",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "gpad_compatibility",
+      "kind": "gpad_compatibility",
+      "label": "GPAD Compatibility",
+      "severity": "info",
+      "pass_label": "GPAD-compatible",
+      "fail_label": "Causal model",
+      "unknown_label": "Unknown shape",
+      "status": "fail",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        },
+        {
+          "kind": "shex_nonconformant",
+          "node": "",
+          "shape": "http://purl.obolibrary.org/obo/go/shapes/Individual",
+          "reason": "OR expression not satisfied:"
+        }
+      ],
+      "since_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "since_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "go_cam_shape",
+      "kind": "go_cam_shape",
+      "label": "GO-CAM Shape",
+      "severity": "error",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "6a58093f893945d7b084fc8366587fd8596d7cb4",
+      "last_passed_date": "2026-05-07T15:05:09.385Z"
+    },
+    {
+      "id": "disconnected_individuals",
+      "kind": "sparql",
+      "label": "Disconnected Individuals",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    },
+    {
+      "id": "multiply_reified_edges",
+      "kind": "sparql",
+      "label": "Multiply Reified Edges",
+      "severity": "warning",
+      "status": "pass",
+      "ran_at": "2026-05-07T04:25:48.132Z",
+      "violations": [],
+      "last_passed_commit": "9b9a1213bb939b37f04da70a79069fdb0ab46110",
+      "last_passed_date": "2026-05-04T11:33:35.886Z"
+    }
+  ]
+}
